@@ -1,0 +1,15 @@
+body {
+  width: 1200px;
+  height: 1650px;
+  margin: 0 auto;
+  background-color: #849d8f;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+a {
+    text-decoration: none;
+}
+ol, ul {
+	list-style: none;
+}
