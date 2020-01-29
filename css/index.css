@@ -1,4 +1,4 @@
-
+/*----- Общие стили -----*/
 body {
   width: 1200px;
   height: 2416px;
@@ -9,14 +9,170 @@ body {
   border: 1px solid #ffffff;
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 ol, ul {
 	list-style: none;
 }
 
-/*h1 {
-  position: absolute;
+/* ----- Фон - два рожка -----*/
+.double-ice {
+  width: 647px;
+  height: 584px;
+  background: url('/Users/nazarovich/it/Project_Gllacy/1065481-gllacy-27/img/top/ice-duoblePNG.png') no-repeat;
+}
+
+/* ----- Контейнер для добавок: малина + шоколад -----*/
+.additives {
+  display: flex;
+  justify-content: center;
+}
+
+/* ----- Фон Малина -----*/
+.raspberries {
+  width: 560px;
+  height: 220px;
+  margin-right: 13px;
+  background: url('../img/top/raspberries.png') no-repeat;
+  border-radius: 10px;
+}
+
+/* ----- Фон Шоколад -----*/
+.chocolat {
+  width: 560px;
+  height: 220px;
+  margin-left: 13px;
+  background: url('../img/top/chocolate.png') no-repeat;
+  border-radius: 10px;
+}
+
+ /*----- Фон 'Вафля' для инфо-блока магазина Глейси ------------------------*/
+.waffle {
+  background: url(../img/info/waffle-big.png) no-repeat;
+  width: 1160px;
+  height: 325px; 
+  margin-left: 27px;
+}
+
+.info-shop {    /*Контейнер для вафли*/
+  display: flex;
+
+}
+
+.left {
+  
+}
+
+.right {
+ 
+}
+
+/*----- контейнер для .strawberry(блок клубника) и .subs-ground(блок подписка) ---------------------------*/
+.subscription {
+  display: flex;
+  justify-content: center;
+}
+
+/*----- Блок инфо: Клубника "Новое в нашем блоге" -----------------------------------*/
+.strawberry {
+  display: flex;
+  width: 560px;
+  height: 220px;
+  margin-right: 13px;
+}
+
+.straw-ground { /*Фон - клубника*/
+  background: url('../img/info/strawberry.png') no-repeat;
+  width: 560px;
+  height: 220px; 
+}
+
+.straw-ground h2 {
+  text-decoration: underline;
+  margin-left: 19px;
+  margin-top: -10px;
+  color: #323232;
+  line-height: 32px;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+}
+
+.straw-ground p {
+ color: #000000;
+ font-size: 16px;
+ margin-left: 19px;
+ padding-top: 8px;
+}
+
+/*----- Блок подписки: форма, кнопка, текст -----------------------------------*/
+.subs-ground{ /*Контейнер подписки*/
+  width: 560px;
+  height: 220px;
+  margin-left: 13px;
+}
+
+.back-subs { /*Прочтовый, задний фон блока*/
+ display: flex;
+ background: url('../img/info/bg-post.svg') no-repeat;
+ width: 560px;
+ height: 220px; 
+}
+
+.front-subs { /*Передний, серый фон блока*/
+background: url('../img/info/substrate.png') no-repeat;
+width: 552px;
+height: 213px; 
+margin: auto;
+}
+
+.front-subs p { /*Текст в блоке*/
+color: #5a5a5a;
+line-height: 1.36; 
+font-size: 16px;
+margin-left: 22px;
+margin-top: 29px;
+width: 517px;
+opacity: 0.8;
+}
+
+.form-email {  /*Форма*/
+  height: 42px;
+  width: 345px;
+  border-radius: 5px;
+  border: solid 1px rgba(178, 178, 178, 0.52);
+  background-color: #ffffff;
+  padding-left: 15px;
+  margin-left: 20px;
+  margin-top: 24px;
+}
+
+input[type='text']::placeholder {
+  color: #999999;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+.button-email{ /*Кнопка*/
+  display: inline-block;
+  width: 129px;
+  height: 46px;
+  box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
+  background-image: linear-gradient(to top, #e74a35, #f26843);
+  color: #ffffff;
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 35px;
+  margin-left: 7px;
+}
+
+  
+
+/*
+h1 {
+
   top: 5px;
   left: 20px;
   width: 100%;
@@ -61,4 +217,4 @@ ol, ul {
   position: absolute;
   top: 100px;
   left: -55px;
-}*/
+}
