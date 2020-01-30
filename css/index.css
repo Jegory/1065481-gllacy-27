@@ -7,6 +7,7 @@ body {
   font-family: 'Roboto', sans-serif;
   color: #ffffff;
   border: 1px solid #ffffff;
+ 
 }
 a {
   text-decoration: none;
@@ -46,25 +47,69 @@ ol, ul {
   border-radius: 10px;
 }
 
+ /*----- ХИТ Картинки с мороженным ------------------------*/
+.hit img[alt$="hits"] {
+
+}
+
+.hit ul {
+   display: flex;
+   width: 1165px;
+   height: 550px;
+   padding: 0;
+   margin: 0;
+   margin-left: 15px; 
+ }
+
+.hit ul li {
+  width: 274px;
+  height: 274px;
+  margin: auto;
+ }
+
  /*----- Фон 'Вафля' для инфо-блока магазина Глейси ------------------------*/
 .waffle {
   background: url(../img/info/waffle-big.png) no-repeat;
-  width: 1160px;
-  height: 325px; 
+  width: 1165px;
   margin-left: 27px;
+
+}
+
+h1 {
+  top: 5px;
+  left: 20px;
+  width: 100%;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: #323232;
+  letter-spacing: normal;
+}
+
+.info-shop p {
+  line-height: 1.38;
+  color: #323232;
 }
 
 .info-shop {    /*Контейнер для вафли*/
   display: flex;
-
+  flex-direction: ;
 }
 
-.left {
-  
+.left-one {
+  width: 540px;
 }
 
-.right {
- 
+.left-two{
+  width: 540px;
+}
+
+.right-one {
+ width: 540px;
+}
+
+.right-two {
+ width: 540px;
 }
 
 /*----- контейнер для .strawberry(блок клубника) и .subs-ground(блок подписка) ---------------------------*/
@@ -168,21 +213,7 @@ input[type='text']::placeholder {
   margin-left: 7px;
 }
 
-  
-
 /*
-h1 {
-
-  top: 5px;
-  left: 20px;
-  width: 100%;
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 1.25;
-  color: #323232;
-  letter-spacing: normal;
-}
-
 .left {
   position: absolute;
   top: 95px;
