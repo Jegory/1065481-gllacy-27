@@ -6,22 +6,307 @@ body {
   background-color: #849d8f;
   font-family: 'Roboto', sans-serif;
   color: #ffffff;
-  border: 1px solid #ffffff;
- 
-}
-a {
-  text-decoration: none;
-}
-ol, ul {
-	list-style: none;
+  border: 1px solid #ffffff; 
 }
 
+/*----- Button -----*/
+button:hover {
+background-image: linear-gradient(0deg, #E74A35 0%, #F26843 100%);
+background: #F07C63;
+box-shadow: 0 2px 2px 0 #AC1000;
+}
+
+button:active {
+background-image: linear-gradient(0deg, #F26843 0%, #E74A35 100%);
+box-shadow: inset 0 2px 2px 0 #942718;
+}
+
+/*----- Логотип -----*/
+nav img.logo {
+ padding-left: 5px;
+ padding-bottom: 50px;
+}
+
+/*----- Блок навигации -----*/
+
+/*   Не реализованно по блоку навигации:
+     1. закругление углов блока всплывающего меню в каталоге на 5px
+     2. всплывающий список прыгает при наведении на каталог > новинки
+     3. не удалось подвинуть меню .main-catalog ближе к логотипу 
+     4. не реаизован color:#000000; на иконках при :hover на кнопках блока .extra-catalog (поиск, вход, корзина)
+     5. не реализовано всплытие форм блока .extra-catalog (поиск, вход, корзина)
+     6. не реализована кнопка "Войти" (всплывающая форма блока "Вход") конфликт.
+     7. не реализована всплывающая форма корзины
+*/.   
+nav {
+   display: flex;
+   justify-content: space-around;
+}
+
+/*-----   Кнопка "Каталог" -----*/
+.main-catalog {
+ display: inline-block; 
+}
+
+.main-catalog > ul{
+ display: flex;
+}
+
+.main-catalog > ul li a{
+ display: block;
+ padding: 7px 13px 7px 13px;
+ font-size: 15px;
+ color: #ffffff;;
+ text-decoration: none;
+ font-weight: bold;
+}
+
+.main-catalog li a:hover{
+ background: #f7f6f3;;
+ color: #000000;
+ border-radius: 50px;
+ font-weight: bold;
+ margin-bottom: 5px;
+}
+
+.main-catalog li ul{
+ position: absolute;
+ min-width: 133px;
+ display: none;
+}
+
+/*----- Всплывающий список "Новинка" -----*/
+.main-catalog li > ul li a{
+ padding: 10px;
+ color: #000000;
+ background: #f8f7f4; 
+ box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+ font-weight: 100;
+ font-size: 14px;
+ line-height: 10px;
+ padding: 10px 18px 10px 18px;
+}
+
+.main-catalog li> ul li:first-child {
+ border-bottom: 1px solid #b1b3b5;
+}
+
+.main-catalog li > ul li a:hover{
+ background: #FBDED7;
+ color: #000000;
+ border-radius: 0px;
+ font-weight: 100;
+ margin-bottom: 0px;
+ line-height: 10px;
+ padding: 10px 18px 10px 18px;
+}
+
+.main-catalog li > ul li a:active{
+ padding: 10px;
+ background: #F6B5A5;
+ color: #000000;
+ line-height: 10px;
+ padding: 10px 18px 10px 18px;
+}
+  
+.main-catalog li:hover > ul{
+ display: block;
+}
+
+
+/*---- Левый блок в навигации (поиск, вход, корзина) ----*/
+
+.extra-catalog {
+ display: inline-block;  
+ margin-left: 320px;
+}
+
+.extra-catalog > ul{
+ display: flex;
+}
+
+.extra-catalog button {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.extra-catalog .entry img, .extra-catalog .basket img {
+  padding-right: 7px;
+}
+
+.search {
+  width: 32px;
+  height: 32px;
+}
+
+.entry {
+  width: 93px;
+  height: 32px;
+}
+
+.basket {
+  width: 100px;
+  height: 32px;
+}
+
+.extra-catalog button {
+margin: 5px;
+border-radius: 50px;
+border: none;
+background: rgba(255,255, 255, 0.2);
+box-shadow: none;
+color: #ffffff;
+font-weight: 500;
+font-size: 14px;
+}
+
+.extra-catalog button:hover {
+margin: 5px;
+border-radius: 50px;
+border: none;
+background: #f8f7f4;
+box-shadow: none;
+color: #000000;
+font-weight: 500;
+font-size: 14px;
+}
+
+.extra-catalog p {
+ text-align: right;
+ font-size: 14px;
+ font-weight: bold;
+ padding-right: 5px;
+}
+
+.extra-catalog span {
+ font-size: 22px;
+ font-weight: bold;
+}
+
+/* ---- Всплывающие формы: поиск, выход, корзина покупок ---- */
+
+/* Форма поиска */
+/*.form-search {
+  width: 340px;
+  height: 87px;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+  background-color: #f8f7f4;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #999999;
+}
+
+.form-search input {
+   width: 311px;
+  height: 47px;
+  border: solid 1px #d3d3d2;
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin-left: -25px;
+  padding-left: 10px;
+}*/
+
+/* Форма входа */
+
+/*.form-entry {
+  width: 276px;
+  height: 214px;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+  background-color: #f8f7f4;
+  font-size: 14px;
+  border-radius: 5px;
+  color: #999999;
+}
+
+.form-entry input{
+  width: 240px;
+  height: 45px;
+  border: solid 1px #d3d3d2;
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin-left: -20px;
+  margin-top: 20px;
+  padding-left: 13px;
+  font-size: 13px;
+  color: #999999;
+}
+
+.form-entry a {
+  color: #323232;
+  text-decoration: underline;
+}
+
+.form-entry p {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: normal;
+  margin-top: -30px;
+  margin-left: 11px;
+  line-height: 1.85;
+  text-align: left;
+}
+
+.form-entry button {       Кнопка обратной связи
+  display: inline-block;
+  width: 100px;
+  height: 43px;
+  box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
+  background-image: linear-gradient(to top, #e74a35, #f26843);
+  color: #ffffff;
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 25px;
+  padding-right: 30px;
+  margin-top: 18px;
+  margin-left: -20px;
+}*/
+
 /* ----- Фон - два рожка -----*/
+/*  не реализованы слайдер*/
+
 .double-ice {
   width: 647px;
   height: 584px;
-  background: url('/Users/nazarovich/it/Project_Gllacy/1065481-gllacy-27/img/top/ice-duoblePNG.png') no-repeat;
+  background: url('../img/top/ice-duoblePNG.png') no-repeat;
+  margin: auto;
+  margin-bottom: -20px;
+  margin-top: -50px;
 }
+
+.double-ice p {
+  display: inline-block;
+  text-align: center;
+  width: 695px;
+  height: 122px;
+  font-family: Helvetica;
+  font-size: 60px;
+  font-weight: 300;
+  line-height: 1.01;
+  letter-spacing: normal;
+  margin-top: 302px;
+  margin-left: -24px;
+  color: #ffffff; 
+}
+
+/*Кнопка - Давайте оба*/
+ .button-double {
+  display: inline-block;
+  width: 278px;
+  height: 64px;
+  box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
+  background-image: linear-gradient(to top, #e74a35, #f26843);
+  box-shadow: 0 2px 2px 0 rgba(172,16,0,0.64);
+  color: #ffffff;
+  border: none;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 1.46;
+  border-radius: 35px;
+  margin-left: 183px;
+  margin-top: -33px;
+ }
 
 /* ----- Контейнер для добавок: малина + шоколад -----*/
 .additives {
@@ -29,50 +314,150 @@ ol, ul {
   justify-content: center;
 }
 
-/* ----- Фон Малина -----*/
+/* ----- Фон Малина -----*/ 
 .raspberries {
   width: 560px;
-  height: 220px;
+  height: 230px;
   margin-right: 13px;
   background: url('../img/top/raspberries.png') no-repeat;
   border-radius: 10px;
 }
 
+.button-raspberries { /*Кнопка - Хочу варенья*/
+  display: inline-block;
+  width: 166px;
+  height: 49px;
+  box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
+  background-image: linear-gradient(to top, #e74a35, #f26843);
+  color: #ffffff;
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 35px;
+  margin-top: 40px;
+  margin-left: 374px;
+}
+
 /* ----- Фон Шоколад -----*/
 .chocolat {
   width: 560px;
-  height: 220px;
+  height: 230px;
   margin-left: 13px;
   background: url('../img/top/chocolate.png') no-repeat;
   border-radius: 10px;
 }
 
- /*----- ХИТ Картинки с мороженным ------------------------*/
-.hit img[alt$="hits"] {
+.button-chocolat { /*Кнопка - Хочу шоколадки*/
+  display: inline-block;
+  width: 190px;
+  height: 48px;
+  opacity: 0.99;
+  box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
+  background-image: linear-gradient(to top, #e74a35, #f26843);
+  color: #ffffff;
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 35px;
+  margin-top: 40px;
+  margin-left: 350px;
+}
 
+.raspberries p, .chocolat p {
+  font-size: 18px;
+  font-weight: ;
+  line-height: 1.22;
+  color: #ffffff;
+  margin: 0px 22px;
+}
+
+.raspberries h2, .chocolat h2 {
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 1.17;
+  color: #ffffff;
+  margin-left: 22px;
+  margin-top: 15px;
+  margin-bottom: 20px;ß
+}
+
+ /*----- ХИТ Картинки с мороженным ------------------------*/
+ /* 1. не реализованна кнопка БЫСТРЫЙ ПРОСМОТР (не понятно как ее вставить что бы
+       при наведении она появлялась, потом исчезала)
+    2. не могу подвинуть весь блок hit левее на 10px что бы он стал по центру
+*/
+.hit {
+  width: 1200px;
+  height: 357px;
 }
 
 .hit ul {
-   display: flex;
-   width: 1165px;
-   height: 550px;
-   padding: 0;
-   margin: 0;
-   margin-left: 15px; 
- }
+  display: flex;
+  margin-top: 30px;
+}
 
 .hit ul li {
-  width: 274px;
-  height: 274px;
-  margin: auto;
- }
+  width: 290px;
+}
+
+.box img {
+  padding: 10px;
+}
+
+.hit img[alt$="hits"] {
+ position: absolute;
+}
+
+.hit span {
+  text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
+  text-decoration: none;
+  font-size: 45px;
+  font-weight: bold;
+  line-height: 0.29;
+}
+
+.hit b {
+  text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 0.44;
+}
+
+.hit p {
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.38;
+  text-align: center;
+  padding: 5px;
+}
+
+.cost {
+  margin: -55px 0px 30px 10px;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.box:hover{
+background: rgba(255,255,255,0.20);
+box-shadow: 0 20px 20px 0 rgba(0,0,0,0.40);
+border-radius: 5px;
+}  
+ 
 
  /*----- Фон 'Вафля' для инфо-блока магазина Глейси ------------------------*/
+ /* Вафля пока остается не побежденной в связи с плохим пониманием флексов. 
+    Точнее картинка и текст мешают друг другу. Не могу выровнять*/
+
 .waffle {
   background: url(../img/info/waffle-big.png) no-repeat;
   width: 1165px;
   margin-left: 27px;
-
 }
 
 h1 {
@@ -132,6 +517,14 @@ h1 {
   height: 220px; 
 }
 
+.straw-ground a {
+  color: #323232;
+}
+
+.straw-ground a:link, .straw-ground a:hover {
+  color: #F07B63;
+}
+
 .straw-ground h2 {
   text-decoration: underline;
   margin-left: 19px;
@@ -140,7 +533,6 @@ h1 {
   line-height: 32px;
   font-size: 24px;
   font-weight: bold;
-  letter-spacing: -0.5px;
 }
 
 .straw-ground p {
@@ -168,7 +560,7 @@ h1 {
 background: url('../img/info/substrate.png') no-repeat;
 width: 552px;
 height: 213px; 
-margin: auto;
+margin: 5px;
 }
 
 .front-subs p { /*Текст в блоке*/
@@ -192,13 +584,13 @@ opacity: 0.8;
   margin-top: 24px;
 }
 
-input[type='text']::placeholder {
+input[type='email']::placeholder {
   color: #999999;
   font-size: 16px;
   font-weight: 100;
 }
 
-.button-email{ /*Кнопка*/
+.button-entry { /*Кнопка*/
   display: inline-block;
   width: 129px;
   height: 46px;
@@ -210,42 +602,73 @@ input[type='text']::placeholder {
   font-size: 18px;
   line-height: 1.33;
   border-radius: 35px;
-  margin-left: 7px;
 }
 
-/*
-.left {
-  position: absolute;
-  top: 95px;
-  left: 70px;
-  width: 485px;
-}
-.right{
-  position: absolute;
-  top: 95px;
-  right: 85px;
-  width: 480px;
+/* ----- Блок карты ----- */
+
+/* Иконка рожка на карте */
+.icon-map {
+  
 }
 
-.ice {
-  position: absolute;
-  top: 5px;
-  left: -55px;
-}
-.eco {
-  position: absolute;
-  top: 100px;
-  left: -55px;
-}
-
-.cow {
-  position: absolute;
-  top: 5px;
-  left: -55px;
+/* Форма обратной связи */
+.contact {
+  width: 304px;
+  height: 305px;
+  background-color: rgba(255, 255, 255, 0.98);
+  color: #323232;
+  font-size: 14px;
+  line-height: 1.43;
+  border-radius: 10px;
+  padding: 15px 0px 15px 25px;
 }
 
-.thermometer {
-  position: absolute;
-  top: 100px;
-  left: -55px;
+.contact span {
+  font-size: 18px;
+  line-height: 1.33;
+  font-weight: bold;
 }
+
+.button-contact{ Кнопка обратной связи
+  display: inline-block;
+  width: 254px;
+  height: 46px;
+  box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
+  background-image: linear-gradient(to top, #e74a35, #f26843);
+  color: #ffffff;
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 35px;
+  margin-top: 24px;
+}
+
+/*---- FOOTER ----*/
+footer > div > ul {
+  display: flex;
+}
+
+footer > div {
+  display: inline-block;
+}
+
+
+.network {
+  width: 222px;
+}
+
+.network ul{
+  display: flex;
+  justify-content: space-between;
+}
+
+.document {
+ 
+}
+
+.logo-academy {
+  
+}
+
+
