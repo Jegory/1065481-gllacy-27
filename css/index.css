@@ -4,6 +4,7 @@ body {
   height: 2416px;
   margin: 0 auto;
   background-color: #849d8f;
+  /*background: url('../img/gllacy-index-1000.svg') no-repeat fixed;*/
   font-family: 'Roboto', sans-serif;
   color: #ffffff;
   border: 1px solid #ffffff; 
@@ -23,8 +24,8 @@ box-shadow: inset 0 2px 2px 0 #942718;
 
 /*----- Логотип -----*/
 nav img.logo {
+ display: inline-block;
  padding-left: 5px;
- padding-bottom: 50px;
 }
 
 /*----- Блок навигации -----*/
@@ -45,7 +46,7 @@ nav {
 
 /*-----   Кнопка "Каталог" -----*/
 .main-catalog {
- display: inline-block; 
+ display: inline-block;
 }
 
 .main-catalog > ul{
@@ -61,61 +62,77 @@ nav {
  font-weight: bold;
 }
 
+.main-catalog li a {
+  margin-bottom: 5px;
+}
+
 .main-catalog li a:hover{
- background: #f7f6f3;;
+ background: #f7f6f3;
  color: #000000;
  border-radius: 50px;
  font-weight: bold;
- margin-bottom: 5px;
 }
 
 .main-catalog li ul{
+ background: #f8f7f4;
  position: absolute;
- min-width: 133px;
  display: none;
+ border-radius: 5px;
+ padding-left: 18px;
+ padding-right: 18px;
+ box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
 /*----- Всплывающий список "Новинка" -----*/
-.main-catalog li > ul li a{
- padding: 10px;
+.main-catalog li > ul li a {
  color: #000000;
  background: #f8f7f4; 
- box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+ box-shadow: none;
  font-weight: 100;
- font-size: 14px;
- line-height: 10px;
- padding: 10px 18px 10px 18px;
+ font-size: 13px;
+ line-height: 15px;
+ padding-left: 0px;
+ padding-right: 0px;
+}
+
+.main-catalog li > ul li a:hover{
+ background: #FBDED7;
+ border-radius: 0px;
+ font-weight: 100;
+ padding: 10px;
+ color: #000000;
+ line-height: 15px;
+  margin-left: -18px;
+ margin-right: -18px;
+}
+
+.main-catalog li > ul li a:active {
+ background: #F6B5A5;
+ border-radius: 0;
+ font-weight: 100;
+ padding: 10px;
+ color: #000000;
+ line-height: 15px;
+  margin-left: -18px;
+ margin-right: -18px;
 }
 
 .main-catalog li> ul li:first-child {
  border-bottom: 1px solid #b1b3b5;
 }
 
-.main-catalog li > ul li a:hover{
- background: #FBDED7;
- color: #000000;
- border-radius: 0px;
- font-weight: 100;
- margin-bottom: 0px;
- line-height: 10px;
- padding: 10px 18px 10px 18px;
-}
-
-.main-catalog li > ul li a:active{
- padding: 10px;
- background: #F6B5A5;
- color: #000000;
- line-height: 10px;
- padding: 10px 18px 10px 18px;
-}
+.main-catalog li > ul li:first-child a:hover {
+    border-radius: 5px 5px 0 0;
+}    
+.main-catalog li > ul li:first-child a:hover {
+    border-radius:  0 0 5px 5px;
+}    
   
 .main-catalog li:hover > ul{
  display: block;
 }
 
-
 /*---- Левый блок в навигации (поиск, вход, корзина) ----*/
-
 .extra-catalog {
  display: inline-block;  
  margin-left: 320px;
@@ -184,10 +201,25 @@ font-size: 14px;
  font-weight: bold;
 }
 
+.extra-catalog ul li:first-child:hover .form-search {
+  display:block;
+}
+
+.extra-catalog ul li:nth-child(2):hover .form-entry {
+  display:block;
+}
+
+.extra-catalog ul li:nth-child(3):hover .form-basket {
+  display:block;
+}
+
 /* ---- Всплывающие формы: поиск, выход, корзина покупок ---- */
 
 /* Форма поиска */
-/*.form-search {
+
+.form-search {
+  display: none;
+  position: absolute;
   width: 340px;
   height: 87px;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
@@ -195,6 +227,7 @@ font-size: 14px;
   border-radius: 5px;
   font-size: 14px;
   color: #999999;
+  margin-left: -303px;
 }
 
 .form-search input {
@@ -204,19 +237,24 @@ font-size: 14px;
   background-color: #ffffff;
   border-radius: 5px;
   margin-left: -25px;
+  margin-top: 20px;
   padding-left: 10px;
-}*/
+  color: #999999;
+}
 
 /* Форма входа */
 
-/*.form-entry {
+.form-entry {
+  display: none;
+  position: absolute;
   width: 276px;
   height: 214px;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
   background-color: #f8f7f4;
-  font-size: 14px;
   border-radius: 5px;
+  font-size: 14px;
   color: #999999;
+  margin-left: -177px;
 }
 
 .form-entry input{
@@ -247,7 +285,7 @@ font-size: 14px;
   text-align: left;
 }
 
-.form-entry button {       Кнопка обратной связи
+.form-entry button {       /*Кнопка обратной связи*/
   display: inline-block;
   width: 100px;
   height: 43px;
@@ -258,10 +296,34 @@ font-size: 14px;
   font-weight: bold;
   font-size: 18px;
   border-radius: 25px;
-  padding-right: 30px;
   margin-top: 18px;
   margin-left: -20px;
-}*/
+}
+
+.form-basket {
+  display: none;
+  position: absolute;
+  width: 542px;
+  height: 245px;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+  background-color: #f8f7f4;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #999999;
+  margin-left: -437px;
+}
+
+.form-basket input {
+   width: 311px;
+  height: 47px;
+  border: solid 1px #d3d3d2;
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin-left: -25px;
+  margin-top: 20px;
+  padding-left: 10px;
+  color: #999999;
+}
 
 /* ----- Фон - два рожка -----*/
 /*  не реализованы слайдер*/
@@ -612,7 +674,15 @@ input[type='email']::placeholder {
 }
 
 /* Форма обратной связи */
+.content {
+  font-size: 18px;
+  width: 230px;
+  font-weight: bold;
+ line-height: 1.33;
+} 
+
 .contact {
+  display: inline-block;
   width: 304px;
   height: 305px;
   background-color: rgba(255, 255, 255, 0.98);
@@ -623,11 +693,7 @@ input[type='email']::placeholder {
   padding: 15px 0px 15px 25px;
 }
 
-.contact span {
-  font-size: 18px;
-  line-height: 1.33;
-  font-weight: bold;
-}
+
 
 .button-contact{ Кнопка обратной связи
   display: inline-block;
@@ -643,6 +709,83 @@ input[type='email']::placeholder {
   border-radius: 35px;
   margin-top: 24px;
 }
+
+/*----  Форма "Мы обязательно с вами свяжемся" ----*/
+.form-answer {
+  width: 480px;
+  height: 442px;
+  margin: 0 auto;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+  background-color: #f8f7f4;
+  border-radius: 5px;
+}
+
+.close {
+ display: inline;
+ margin-left: 447px;
+}
+
+.form-answer p {
+  display: inline;
+  font-size: 24px;
+  margin: 16px 20px 20px 22px;
+  color: #000000;
+  font-weight: 500;
+}
+
+.form-answer input{
+  width: 267px;
+  height: 45px;
+  border: solid 1px #d3d3d2;
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin-left: 25px;
+  margin-top: 20px;
+  padding-left: 16px;
+  color: #999999;
+  font-weight: 100;
+}
+
+.text-answer {
+  border: solid 1px #d3d3d2;
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin-left: 4px;
+  font-size: 16px;
+  padding: 13px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #999999;
+  font-weight: 100;
+}
+
+.form-answer button {      
+  display: inline-block;
+  width: 140px;
+  height: 43px;
+  box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
+  background-image: linear-gradient(to top, #e74a35, #f26843);
+  color: #ffffff;
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 25px;
+  margin-left: 315px;
+}
+
+button:hover {
+background-image: linear-gradient(0deg, #E74A35 0%, #F26843 100%);
+background: #F07C63;
+box-shadow: 0 2px 2px 0 #AC1000;
+}
+
+button:active {
+background-image: linear-gradient(0deg, #F26843 0%, #E74A35 100%);
+box-shadow: inset 0 2px 2px 0 #942718;
+}
+
+
 
 /*---- FOOTER ----*/
 footer > div > ul {
@@ -670,5 +813,3 @@ footer > div {
 .logo-academy {
   
 }
-
-
