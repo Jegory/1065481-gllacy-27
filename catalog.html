@@ -9,45 +9,226 @@
   </head>
   <body>
 	 <header>
-    	<nav>
-    	  <a href="index.html">
-    	    <img src="img/menu/logo.svg" alt="Логотип магазина Gllacy">
-    	  </a>
-    	  <ul>
-	       <li><a href="">Каталог</a></li>
-	       <li><a href="">Доставка и оплата</a></li>
-	    	 <li><a href="">О Компании</a></li>
-    	  </ul>
-    	  <ul>
-    	    <li>
-    		   <button class="search" type="button">
-    			  <img src="img/menu/loupe.svg" alt="Поиск">
-    			</button>
-    		 </li>
-    		 <li>
-    			<button class="entry" type="button">
-    			  <img src="img/menu/entrance.svg" alt="Вход на сайт"> Вход
-    			</button>
-    		 </li>
-    		 <li>
-    		   <button class="basket" type="button">
-    			  <img src="img_catalog/basket-red.svg" alt="Корзина покупок"> 2 товара
-    			</button>
-    		 </li>
-    		   <p>С 10 до 20, ежедневно <br> 
-    			<span>8 812 450-25-25</span>	
-    			</p>
-    	  </ul>
-    	</nav>
+    <nav>
+          <a href="index.html">
+            <img src="img/menu/logo.svg" class="logo" alt="Логотип магазина Gllacy">
+          </a>
+      <div class="main-catalog">
+         <ul>
+           <li class="catalog"><a href="catalog.html">Каталог</a></li>
+           <li><a href="">Доставка и оплата</a></li>
+           <li><a href="">О Компании</a></li>
+         </ul>
+      </div>
+      <div class="extra-catalog">
+         <ul>
+           <li>
+             <button class="search" type="button">
+               <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+                    <path fill="#fff" fill-rule="nonzero" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11A4.505 4.505 0 0 1 2 6.5C2 4.019 4.019 2 6.5 2S11 4.019 11 6.5 8.981 11 6.5 11z"/>
+               </svg>
+             </button>
+             <div class="form-search">
+               <ul>  
+                 <li>
+                   <form action="https://echo.htmlacademy.ru" method="post">
+                     <input type="search" name="search" placeholder="Что ищем?">
+                   </form>
+                 </li>
+               </ul>
+             </div>
+           </li>
+           <li>
+              <button class="entry" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="19" viewBox="0 0 21 19">
+                     <g fill="#FFF" fill-rule="nonzero">
+                     <path d="M7 14.875L13.917 9.5 7 4.125v2.917H.958v4.917H7z"/>
+                     <path d="M19 0H6C4.9 0 4 .9 4 2v2h2V2h13v15H6v-2H4v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/></g>
+                     </svg> Вход
+              </button>
+              <div class="form-entry">
+                <ul> 
+                  <li>
+                    <form action="https://echo.htmlacademy.ru" method="post">
+                      <input class="email-entry" type="email" name="email" placeholder="email@example.com">
+                      <input class="password-entry" type="password" name="password" placeholder="••••••••">
+                    </form>
+                    <button class="button-entry" type="submit">Войти</button>
+                      <p>
+                        <a href="">Забыли пароль?</a><br>
+                        <a href="">Новая регистрация</a>
+                      </p>
+                  </li>
+                </ul>
+              </div>  
+            </li>
+            <li>
+              <button class="basket" type="button">
+                <svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <title>basket-red</title>
+                    <desc>Created with Sketch.</desc>
+                    <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="Catalog" transform="translate(-1071.000000, -29.000000)">
+                            <g id="Шапка" transform="translate(27.000000, 9.000000)">
+                                <g id="Корзина" transform="translate(1026.000000, 12.000000)">
+                                    <g id="basket-red" transform="translate(18.000000, 8.000000)">
+                                        <g>
+                                            <polygon id="Shape" fill="#E84D37" fill-rule="nonzero" points="5.888 4.031 6.922 13 17.372 13 18.548 4.031"></polygon>
+                                            <circle id="Oval" fill="#343434" fill-rule="nonzero" cx="6.984" cy="18" r="2"></circle>
+                                            <circle id="Oval" fill="#343434" fill-rule="nonzero" cx="15.984" cy="18" r="2"></circle>
+                                            <path d="M5.657,2.031 L5.422,0 L0,0 L0,2 L3.64,2 L5.14,15 L19.128,15 L20.827,2.031 L5.657,2.031 Z M17.372,13 L6.922,13 L5.888,4.031 L18.548,4.031 L17.372,13 Z" id="Shape" fill="#343434" fill-rule="nonzero"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+                2 товара
+              </button>
+              <div class="form-basket">
+              <ul>
+                  <li>
+                      <form action="https://echo.htmlacademy.ru" method="post">
+                        <div class="favorites-basket1">
+                            <img src="img/menu/cross-small.svg" alt="cross">
+                            <img src="img/menu/ice1.png" class="my-ice" alt="ice1">
+                            <p>Пломбир с апельсиновым джемом</p>
+                            <p>1,5 кг х 200 руб.</p>
+                            <p>300 руб.</p>
+                        </div>
+                        <div class="favorites-basket2">
+                            <img src="img/menu/cross-small.svg" alt="cross">
+                            <img src="img/menu/ice2.png" class="my-ice" alt="ice2">
+                            <p>Клубничный пломбир с присыпкой<br>из белого шоколада</p>
+                            <p>1,5 кг х 300 руб.</p>
+                            <p>450 руб.</p>
+                        </div>
+                      </form>
+                      <p class="total">Итого: 750 руб.</p>
+                      <button class="button-basket" type="submit">Оформить заказ</button>
+                  </li>
+              </ul>
+             </div>
+             <p class="number">С 10 до 20, ежедневно<br><span>8 812 450-25-25</span></p>
+            </li>
+          </ul>
+       </div>
+      </nav>
     </header>
     <main>
-      <ul>
-    	  <li><a href="index.html">Главная</a></li>
-    	  <li><a href="">Каталог</a></li>
-    	  <li><a href="">Сливочное</a></li>
-    	</ul>
+     <p><a href="index.html">Главная</a>  »  <a href="">Каталог</a>  »  Сливочное</p>
     	<h2>Сливочное мороженное</h2>
-    	  <ul>
+        <section>
+            <div class="range">
+                RANGE
+            </div>
+        </section>
+        <section>
+        <div class="hit">
+          <ul>
+            <li><a href="">
+              <div class="box">
+                <img src="img/top/1.png" alt="Слива-апельсин">
+                <div class="cost"><span>310₽</span><b>/кг</b></div>
+                <p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+                <button class="button-hit" type="button">Быстрый просмотр</button>
+              </div></a>
+            </li>
+            <li><a href="">
+              <div class="box">
+                <img src="img/top/2.png" alt="Кофейное">
+                <div class="cost"><span>380₽</span><b>/кг</b></div>
+                <p>Сливочно-кофейное с кусочками шоколада</p>
+                <button class="button-hit" type="button">Быстрый просмотр</button>
+              </div></a>
+            </li>
+            <li><a href="">
+              <div class="box">
+                <img src="img/top/3.png" alt="Слива-клубника">
+                <div class="cost"><span>355₽</span><b>/кг</b></div>
+                <p>Сливочно-клубничное с присыпкой из белого шоколада</p>
+                <button class="button-hit" type="button">Быстрый просмотр</button>
+              </div></a>
+            </li>
+            <li><a href="">
+              <div class="box">
+                <img src="img/top/4.png" alt="Карамель">
+                <div class="cost"><span>415₽</span><b>/кг</b></div>
+                <p>Сливочное крем-брюле с карамельной подливкой</p>
+                <button class="button-hit" type="button">Быстрый просмотр</button>
+              </div></a>
+            </li>
+
+            <li><a href="">
+              <div class="box">
+                <img src="img_catalog/5.png" alt="Слива-апельсин">
+                <div class="cost"><span>325₽</span><b>/кг</b></div>
+                <p>Сливочное с брусничным джемом </p>
+                <button class="button-hit" type="button">Быстрый просмотр</button>
+              </div></a>
+            </li>
+            <li><a href="">
+              <div class="box">
+                <img src="img_catalog/6.png" alt="Кофейное">
+                <div class="cost"><span>410₽</span><b>/кг</b></div>
+                <p>Сливочно-черничное с цельными ягодами черники</p>
+                <button class="button-hit" type="button">Быстрый просмотр</button>
+              </div></a>
+            </li>
+            <li><a href="">
+              <div class="box">
+                <img src="img_catalog/7.png" alt="Слива-клубника">
+                <div class="cost"><span>375₽</span><b>/кг</b></div>
+                <p>Сливочно-лимонное с карамельной присыпкой</p>
+                <button class="button-hit" type="button">Быстрый просмотр</button>
+              </div></a>
+            </li>
+            <li><a href="">
+              <div class="box">
+                <img src="img_catalog/8.png" alt="Карамель">
+                <div class="cost"><span>320₽</span><b>/кг</b></div>
+                <p>Сливочное с шоколадной стружкой</p>
+                <button class="button-hit" type="button">Быстрый просмотр</button>
+              </div></a>
+            </li>
+
+            <li><a href="">
+              <div class="box">
+                <img src="img_catalog/9.png" alt="Слива-апельсин">
+                <div class="cost"><span>440₽</span><b>/кг</b></div>
+                <p>Сливочно-ванильное с кусочками шоколада </p>
+                <button class="button-hit" type="button">Быстрый просмотр</button>
+              </div></a>
+            </li>
+            <li><a href="">
+              <div class="box">
+                <img src="img_catalog/10.png" alt="Кофейное">
+                <div class="cost"><span>435₽</span><b>/кг</b></div>
+                <p>Сливочноe с ментоловым сиропом</p>
+                <button class="button-hit" type="button">Быстрый просмотр</button>
+              </div></a>
+            </li>
+            <li><a href="">
+              <div class="box">
+                <img src="img_catalog/11.png" alt="Слива-клубника">
+                <div class="cost"><span>355₽</span><b>/кг</b></div>
+                <p>Сливочное с кусочками черного шоколада</p>
+                <button class="button-hit" type="button">Быстрый просмотр</button>
+              </div></a>
+            </li>
+            <li><a href="">
+              <div class="box">
+                <img src="img_catalog/12.png" alt="Карамель">
+                <div class="cost"><span>420₽</span><b>/кг</b></div>
+                <p>Сливочное с мятным сиропом</p>
+                <button class="button-hit" type="button">Быстрый просмотр</button>
+              </div></a>
+            </li>
+          </ul>
+        </div>    
+      </section>
+    <!-- 	  <ul>
     			<li><a href=""><img src="img_catalog/1.png" alt=""><span><strong>310₽</strong>/кг</span><p>Сливочное с апельсиновым джемом и цитрусовой стружкой </p></a></li>
     			<li><a href=""><img src="img_catalog/2.png" alt=""><span><strong>380₽</strong>/кг</span><p>Сливочно-кофейное с кусочками шоколада</p></a></li>
     			<li><a href=""><img src="img_catalog/3.png" alt=""><span><strong>355₽</strong>/кг</span><p>Сливочно-клубничное с присыпкой из белого шоколада</p></a></li>
@@ -60,21 +241,28 @@
     			<li><a href=""><img src="img_catalog/10.png" alt=""><span><strong>435₽</strong>/кг</span><p>Сливочноe с ментоловым сиропом</p></a></li>
     			<li><a href=""><img src="img_catalog/11.png" alt=""><span><strong>355₽</strong>/кг</span><p>Сливочное с кусочками черного шоколада</p></a></li>
     			<li><a href=""><img src="img_catalog/12.png" alt=""><span><strong>420₽</strong>/кг</span><p>Сливочное с мятным сиропом</span></a></li>
-       </ul>
+       </ul> -->
     </main>
     <footer>
+      <div class="network">
+        <ul>
+          <li><a href=""><img src="img/footer/twitter.svg" alt="Твитер"></a></li>
+          <li><a href=""><img src="img/footer/instagram.svg" alt="Инстаграмм"></a></li>
+          <li><a href=""><img src="img/footer/fb.svg" alt="Фейсбук"></a></li>
+          <li><a href=""><img src="img/footer/vk.svg" alt="ВКонтакте"></a></li>
+         </ul>
+      </div>
+      <div class="document">
+        <img src="img/footer/heart.svg" class="herat" alt="Сердечко">
       <ul>
-    	  <li><a href=""><img src="img/footer/twitter.svg" aria-label="Твитер"></a></li>
-    	  <li><a href=""><img src="img/footer/instagram.svg" aria-label="Инстаграмм"></a></li>
-    	  <li><a href=""><img src="img/footer/fb.svg" aria-label="Фейсбук"></a></li>
-    	  <li><a href=""><img src="img/footer/vk.svg" aria-label="ВКонтакте"></a></li>
-    	</ul>
-    	<ul>
-    	  <li><img src="img/footer/heart.svg" alt="Сердечко"><a href=""></a><strong>Для поставщиков</strong></li>
-    	  <li><a href=""></a>О производстве</li>
-    	  <li><a href=""></a>Наши документы</li>
-    	  <li><a href=""></a>Экологические стандарты</li>
-    	</ul>
+        <li><a href=""><strong>Для поставщиков</a></strong></li>
+        <li><a href="">О производстве</a></li>
+     </ul>
+     <ul>
+        <li><a href="">Наши документы</a></li>
+        <li><a href="">Экологические стандарты</a></li>
+      </ul>
+      </div>
       <div class="logo-academy">
         <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/footer/logo-htmlacademy.svg" alt="HTML Academy"></a>
         <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</p>
