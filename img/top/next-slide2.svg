@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="19px" viewBox="0 0 19 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>Подложка</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Styleguide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.4">
+        <g transform="translate(-916.000000, -1508.000000)" fill="#F8F7F4" id="Главная-кнопка-листалка">
+            <g transform="translate(72.000000, 1277.000000)">
+                <g id="Листалка" transform="translate(815.000000, 154.000000)">
+                    <g id="Листалка-наведение" transform="translate(0.000000, 75.000000)">
+                        <path d="M38.374924,2.249815 C43.48351,2.249815 47.624941,6.391162 47.624941,11.499727 C47.624941,16.608292 43.48351,20.749639 38.374924,20.749639 C33.266254,20.749639 29.124928,16.608292 29.124928,11.499727 C29.124928,6.391162 33.266254,2.249815 38.374924,2.249815 Z" id="Подложка"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

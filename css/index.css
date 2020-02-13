@@ -7,7 +7,7 @@ body {
   /*background: url('../img/gllacy-index-1000.svg') no-repeat fixed;*/
   font-family: 'Roboto', sans-serif;
   color: #ffffff;
-  border: 1px solid #ffffff; 
+  border: 1px solid #ffffff;
 }
 
 /*   Не реализованно по блоку навигации: всплывающий список прыгает принаведении на каталог > новинки */
@@ -17,26 +17,30 @@ nav {
 
 /*----- Логотип -----*/
 nav img.logo {
-  display: flex;
-  margin-left: 30px; 
-  margin-top: -60px;
+  position: relative;
+  padding: 0;
+  bottom: 34px;
+  left: 27px;
 }
 
 /*-----   Кнопка "Каталог" -----*/
 .main-catalog {
+  z-index: 1;
   display: flex;
-  margin-left: -30px;
+  margin-left: 38px;
 }
 
 .main-catalog > ul {
   display: flex;
+  margin-top: 23px;
+  padding: 0;
 }
 
 .main-catalog > ul li a {
   display: block;
-  padding: 7px 14px 7px 14px;
+  padding: 9px 13px 10px 14px;
   font-size: 16px;
-  color: #ffffff;;
+  color: #f7f6f3;
   text-decoration: none;
   font-weight: bold;
 }
@@ -60,12 +64,13 @@ nav img.logo {
   padding-left: 18px;
   padding-right: 18px;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+  width: 143px;
 }
 
 /*----- Всплывающий список "Новинка" -----*/
 .main-catalog li > ul li a {
   color: #000000;
-  background: #f8f7f4; 
+  background: #f8f7f4;
   box-shadow: none;
   font-weight: 100;
   font-size: 13px;
@@ -78,22 +83,26 @@ nav img.logo {
   background: #FBDED7;
   border-radius: 0px;
   font-weight: 100;
-  padding: 10px;
+  padding: 9px 13px 10px 14px;
   color: #000000;
   line-height: 15px;
   margin-left: -18px;
   margin-right: -18px;
+  padding-left: 18px;
+  padding-right: 18px;
 }
 
 .main-catalog li > ul li a:active {
   background: #F6B5A5;
- border-radius: 0;
+ border-radius: 0px;
   font-weight: 100;
-  padding: 10px;
+  padding: 9px 13px 10px 14px;
   color: #000000;
   line-height: 15px;
   margin-left: -18px;
   margin-right: -18px;
+  padding-left: 18px;
+  padding-right: 18px;
 }
 
 .main-catalog li> ul li:first-child {
@@ -103,18 +112,22 @@ nav img.logo {
 .main-catalog li > ul li:first-child a:hover {
   border-radius: 5px 5px 0 0;
 }
-.main-catalog li > ul li:first-child a:hover {
-  border-radius:  0 0 5px 5px;
-}
 
 .main-catalog li:hover > ul {
   display: block;
 }
 
-/*---- Левый блок в навигации (поиск, вход, корзина) ----*/
+/*---- Правый блок в навигации (поиск, вход, корзина) ----*/
 .extra-catalog {
-  display: flex; 
-  margin-left:  300px;
+  display: flex;
+  margin-left: 320px;
+  margin-top: 7px;
+}
+
+/*---- текст ниже правого меню ----*/
+.number {
+  width: 170px;
+  margin-left: -68px;
 }
 
 .extra-catalog > ul {
@@ -128,12 +141,20 @@ nav img.logo {
 }
 
 .extra-catalog .entry svg, .extra-catalog .basket svg {
-  margin-right: 10px;
+  margin-right: 6px;
+}
+
+.extra-catalog .search, .extra-catalog .entry, .extra-catalog .basket {
+  margin-right: 9px;
+}
+
+.extra-catalog .search:hover, .extra-catalog .entry:hover, .extra-catalog .basket:hover {
+  margin-right: 9px;
 }
 
 .search {
-  width: 32px;
-  height: 32px;
+  width: 33px;
+  height: 33px;
 }
 
 .entry {
@@ -148,7 +169,7 @@ nav img.logo {
 
 /*смена фона кнопок svg*/
 .extra-catalog button {
-  margin: 5px;
+  margin: 0 5px 5px 0;
   border-radius: 50px;
   border: none;
   background: rgba(255,255, 255, 0.2);
@@ -160,7 +181,7 @@ nav img.logo {
 
 .extra-catalog button:hover,
 .extra-catalog button:active {
-  margin: 5px;
+  margin: 0 5px 5px 0;
   border-radius: 50px;
   border: none;
   background: #f8f7f4;
@@ -175,11 +196,6 @@ nav img.logo {
 .extra-catalog button:hover circle,
 .extra-catalog button:active circle {
   fill: #000000;
-}
-
-.number {
-  width: 200px;
-  margin-left: -60px;
 }
 
 .extra-catalog span {
@@ -199,44 +215,45 @@ nav img.logo {
 /* ---- Всплывающие формы: поиск, выход, корзина покупок ---- */
 /* Форма поиска */
 .form-search {
+  z-index: 1;
   display: none;
   position: absolute;
   width: 340px;
-  height: 87px;
+  height: 84px;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
-  margin-left: -303px;
+  margin-left: -307px;
    background-color: #f8f7f4;
   border-radius: 5px;
 }
 
 .form-search input {
-   width: 311px;
+  width: 311px;
   height: 47px;
   font-weight: 100;
   font-size: 14px;
-  margin-left: -25px;
-  margin-top: 20px;
+  margin: 20px 15px 20px 15px;
   padding-left: 10px;
 }
 
 /* Форма входа */
 .form-entry {
+  z-index: 1;
   display: none;
   position: absolute;
-  width: 276px;
+  width: 277px;
   height: 214px;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
   background-color: #f8f7f4;
   border-radius: 5px;
   font-size: 13px;
   color: #999999;
-  margin-left: -177px;
+  margin-left: -183px;
 }
 
 .form-entry input {
   width: 240px;
-  height: 45px;
-  margin-left: -20px;
+  height: 44px;
+  margin: 20px 17px 0px 19px;
   margin-top: 20px;
   padding-left: 13px;
 }
@@ -247,11 +264,10 @@ nav img.logo {
 }
 
 .form-entry p {
- position: absolute;
+  position: absolute;
   font-size: 13px;
-  font-weight: normal;
-  margin-top: 15px;
-  margin-left: 100px;
+  top: 132px;
+  left: 140px;
   line-height: 1.85;
   text-align: left;
 }
@@ -269,8 +285,8 @@ nav img.logo {
   border: none;
   font-weight: bold;
   font-size: 18px;
-  margin-left: -20px;
-  margin-top: 20px;
+  top: 148px;
+  left: 20px;
 }
 
 .form-entry button:hover {
@@ -282,8 +298,6 @@ nav img.logo {
   border: none;
   font-weight: bold;
   font-size: 18px;
-  margin-left: -20px;
-  margin-top: 20px;
 }
 
 .form-entry button:active {
@@ -294,8 +308,6 @@ nav img.logo {
   border: none;
   font-weight: bold;
   font-size: 18px;
-  margin-left: -20px;
-  margin-top: 20px;
 }
 
 /* ----- Фон два рожка -----*/
@@ -303,47 +315,72 @@ nav img.logo {
 .double-ice {
   width: 647px;
   height: 584px;
-  background: url('../img/top/ice-duoblePNG.png') no-repeat;
   margin: auto;
-  margin-bottom: -20px;
-  margin-top: -70px;
+}
+
+.ice-backgorund {
+  position: relative;
+  width: 1065px;
+  height: 859px;
+  margin: auto;
+  bottom: 170px;
+}
+
+.photo-duoble {
+  position: relative;
+  bottom: 925px;
 }
 
 .double-ice p {
-  display: inline-block;
-  text-align: center;
-  width: 695px;
-  height: 122px;
-  font-family: Helvetica;
+  position: relative;
+  bottom: 1263px;
+  right: 29px;
+  width: 701px;
+  height: 116px;
   font-size: 60px;
-  font-weight: 300;
+  font-weight: bold;
   line-height: 1.01;
-  letter-spacing: normal;
-  margin-top: 302px;
-  margin-left: -24px;
-  color: #ffffff; 
+  text-align: center;
+  color: #ffffff;
 }
 
 /*Кнопка - Давайте оба*/
 .button-double {
-  display: inline-block;
-  width: 278px;
+  position: relative;
+  bottom: 1263px;
+  width: 280px;
   height: 64px;
   font-size: 32px;
-  line-height: 1.46;
+  line-height: 1.38;
   border-radius: 35px;
   margin-left: 183px;
   margin-top: -33px;
+}
+
+/* ----- кнопки  для переключения слайдов в карусели -----*/
+
+.next-slide {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  position: relative;
+  bottom: 1307px;
+  right: 248px;
+  width: 80px;
+  height: 20px;
+  border: 1px solid #ffffff;
 }
 
 /* ----- Контейнер для добавок: малина + шоколад -----*/
 .additives {
   display: flex;
   justify-content: center;
+  margin-top: -82px;
 }
 
-/* ----- Фон Малина -----*/ 
+/* ----- Фон Малина -----*/
 .raspberries {
+  z-index: 1;
   width: 560px;
   height: 230px;
   margin-right: 13px;
@@ -364,6 +401,7 @@ nav img.logo {
 
 /* ----- Фон Шоколад -----*/
 .chocolat {
+  z-index: 1;
   width: 560px;
   height: 230px;
   margin-left: 13px;
@@ -400,18 +438,16 @@ nav img.logo {
   margin-bottom: 20px;ß
 }
 
- /*----- ХИТ Картинки с мороженным ------------------------*/
+  /*----- ХИТ Картинки с мороженным ------------------------*/
 .hit {
   width: 1200px;
+  height: 357px;
   margin-left: -20px;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .hit ul {
   display: flex;
   margin-top: 30px;
-  flex-wrap: wrap;
 }
 
 .hit ul li {
@@ -515,7 +551,7 @@ a {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-} 
+}
 
 .left, .right {
   width: 555px;
@@ -550,7 +586,7 @@ a {
 .straw-ground { /*Фон - клубника*/
   background: url('../img/info/strawberry.png') no-repeat;
   width: 560px;
-  height: 220px; 
+  height: 220px;
 }
 
 .straw-ground a {
@@ -591,21 +627,21 @@ a {
   display: flex;
   background: url('../img/info/bg-post.svg') no-repeat;
   width: 560px;
-  height: 220px; 
+  height: 220px;
 }
 
 /*Передний, серый фон блока*/
 .front-subs {
   background: url('../img/info/substrate.png') no-repeat;
   width: 552px;
-  height: 213px; 
+  height: 213px;
    margin: 5px;
 }
 
 /*Текст в блоке*/
 .front-subs p {
   color: #5a5a5a;
-  line-height: 1.36; 
+  line-height: 1.36;
   font-size: 16px;
   margin-left: 22px;
   margin-top: 29px;
@@ -642,7 +678,7 @@ input[type='email']::placeholder {
 /* ----- Блок карты ----- */
 /* Иконка рожка на карте */
 .icon-map {
-  
+
 }
 
 /* Форма обратной связи */
@@ -683,15 +719,15 @@ input[type='email']::placeholder {
 
 /*----  Форма "Мы обязательно с вами свяжемся" ----*/
 .form-answer {
-  display: inline-block;
+  display: none;
   position: relative;
   width: 480px;
   height: 440px;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
   background-color: #f8f7f4;
   border-radius: 5px;
-  margin-top: -300px;
-  margin-left: 400px;
+  margin-left: -400px;
+  margin-top: -350px;
 }
 
 .close {
@@ -749,7 +785,7 @@ input[type='email']::placeholder {
   border: solid 2px rgba(154, 154, 154, 0.52);
 }
 
-.form-answer button {      
+.form-answer button {
   display: inline-block;
   width: 140px;
   height: 43px;
@@ -789,10 +825,13 @@ footer {
   height: 100px;
   align-items: center;
   margin-top: 15px;
+  border: 1px solid #ffffff;
 }
 
+/*---- кнопки соцсетей----*/
 .network {
-  width: 205px;
+  width: 224px;
+  margin-left: -13px;
 }
 
 .network ul {
@@ -800,6 +839,40 @@ footer {
   justify-content: space-between;
 }
 
+.network li {
+  width: 38px;
+  height: 38px;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+
+.network li:hover {
+  width: 38px;
+  height: 38px;
+  border: 3px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+}
+
+.network li:active {
+  width: 38px;
+  height: 38px;
+  border: 3px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+}
+
+.network li path {
+  fill: rgba(255, 255, 255, 0.8);
+}
+
+.network li:hover path {
+  fill: #ffffff;
+}
+
+.network li:active path {
+  fill: #e9e9e9;
+}
+
+/*---- инфо о компании ----*/
 .herat {
   margin-top: -25px;
   margin-left: 30px;
@@ -822,10 +895,11 @@ footer {
   padding-right: 23px;
 }
 
+/*---- HTML Academy ----*/
 .logo-academy {
   font-size: 12px;
   font-weight: 100;
-  margin-right: 21px;
+  margin-right: 24px;
   margin-top: 10px;
   line-height: 0.3;
 }
