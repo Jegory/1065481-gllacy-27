@@ -5,7 +5,7 @@ body {
   margin: 0 auto;
   background-color: #849d8f;
   /*background: url('../img/gllacy-index-1000.svg') no-repeat fixed;*/
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', 'Tahoma', sans-serif;
   color: #ffffff;
   border: 1px solid #ffffff;
 }
@@ -17,14 +17,13 @@ nav {
 
 img {
 	max-width: 100%;
-	height: auto;
 }
 
 /*----- Логотип -----*/
 nav img.logo {
   position: relative;
   padding: 0;
-  bottom: 32px;
+  top: 9px;
   left: 27px;
 }
 
@@ -48,24 +47,24 @@ nav img.logo-catalog {
   padding: 0;
 }
 
-.main-catalog > ul li a {
+.main-catalog ul li a {
   display: block;
   padding: 9px 13px 10px 14px;
   font-size: 16px;
   color: #f7f6f3;
   text-decoration: none;
   font-weight: bold;
+  margin-bottom: 5px;
 }
 
-.main-catalog li a {
-   margin-bottom: 5px;
-}
-
-.main-catalog li a:hover {
-  background: #f7f6f3;
-  color: #000000;
+.main-catalog ul li a:hover {
+  color: #333333;
   border-radius: 50px;
-  font-weight: bold;
+}
+
+.main-catalog ul li a:active {
+  box-shadow: inset 0px 2px 1px 0 #696969;
+  background-color: #ededed;
 }
 
 .main-catalog li ul {
@@ -77,6 +76,8 @@ nav img.logo-catalog {
   padding-right: 18px;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
   width: 143px;
+  min-height: 171px;
+
 }
 
 /*----- Меню в каталоге -----*/
@@ -91,13 +92,8 @@ nav img.logo-catalog {
 }
 
 .main-catalog .catalog a:hover {
-  padding: 9px 13px 10px 14px;
-  font-size: 16px;
   color: #ffffff;
   background-color: #d07058;
-   border-radius: 50px;
-  text-decoration: none;
-  font-weight: bold;
 }
 
 .main-catalog a {
@@ -113,28 +109,25 @@ nav img.logo-catalog {
   background: #f7f6f3;
   color: #000000;
   border-radius: 50px;
-  font-weight: bold;
 }
 
 /*----- Всплывающий список "Новинка" -----*/
 .main-catalog li > ul li a {
-  color: #000000;
+  color: #323232;
   background: #f8f7f4;
   box-shadow: none;
-  font-weight: 100;
-  font-size: 13px;
-  line-height: 15px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 13px; /*поменять c 16px на 13px для уменьшения высоты выпадающего меню*/
   padding-left: 0px;
   padding-right: 0px;
+  margin-bottom: 0px;
 }
 
 .main-catalog li > ul li a:hover {
   background: #FBDED7;
+  font-weight: normal;
   border-radius: 0px;
-  font-weight: 100;
-  padding: 9px 13px 10px 14px;
-  color: #000000;
-  line-height: 15px;
   margin-left: -18px;
   margin-right: -18px;
   padding-left: 18px;
@@ -143,23 +136,23 @@ nav img.logo-catalog {
 
 .main-catalog li > ul li a:active {
   background: #F6B5A5;
- border-radius: 0px;
-  font-weight: 100;
-  padding: 9px 13px 10px 14px;
-  color: #000000;
-  line-height: 15px;
-  margin-left: -18px;
-  margin-right: -18px;
-  padding-left: 18px;
-  padding-right: 18px;
+  box-shadow: none;
 }
 
-.main-catalog li> ul li:first-child {
+.main-catalog li > ul li:first-child {
   border-bottom: 1px solid #b1b3b5;
 }
 
 .main-catalog li > ul li:first-child a:hover {
   border-radius: 5px 5px 0 0;
+}
+
+/*.main-catalog li > ul li:last-child a:hover {
+  border-radius: 0 0 5px 5px;
+}*/
+
+.main-catalog li > ul li:nth-child(2) {
+  margin-top: 5px;
 }
 
 .main-catalog li:hover > ul {
@@ -177,6 +170,16 @@ nav img.logo-catalog {
 .number {
   width: 170px;
   margin-left: -68px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.extra-catalog span {
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: bold;
 }
 
 .extra-catalog > ul {
@@ -226,18 +229,13 @@ nav img.logo-catalog {
   color: #ffffff;
   font-weight: 500;
   font-size: 14px;
+  line-height: 16px;
 }
 
 .extra-catalog button:hover,
 .extra-catalog button:active {
-  margin: 0 5px 5px 0;
-  border-radius: 50px;
-  border: none;
   background: #f8f7f4;
-  box-shadow: none;
   color: #000000;
-  font-weight: 500;
-  font-size: 14px;
 }
 
 .extra-catalog button:hover path,
@@ -245,11 +243,6 @@ nav img.logo-catalog {
 .extra-catalog button:hover circle,
 .extra-catalog button:active circle {
   fill: #000000;
-}
-
-.extra-catalog span {
-  font-size: 22px;
-  font-weight: bold;
 }
 
 /*всплытие попапа*/
@@ -453,10 +446,13 @@ nav img.logo-catalog {
 
 main p {
   display: inline-block;
-  padding: relative;
   margin-left: 30px;
   font-size: 14px;
   line-height: 1.14;
+}
+
+main p a {
+	text-decoration: underline;
 }
 
 main h2 {
@@ -503,7 +499,7 @@ main h2 {
   height: 116px;
   font-size: 60px;
   font-weight: bold;
-  line-height: 1.01;
+  line-height: 60px;
   text-align: center;
   color: #ffffff;
 }
@@ -605,7 +601,6 @@ main h2 {
   /*----- ХИТ Картинки с мороженным ------------------------*/
 .hit {
   width: 1200px;
-  min-height: 357px;
   margin-left: -20px;
 }
 
@@ -638,25 +633,25 @@ main h2 {
   text-decoration: none;
   font-size: 45px;
   font-weight: bold;
-  line-height: 0.29;
+  line-height: 45px;
 }
 
 .hit b {
   text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
   font-size: 30px;
   font-weight: bold;
-  line-height: 0.44;
+  line-height: 45px;
 }
 
 .hit p {
   font-size: 16px;
   font-weight: 500;
   font-style: normal;
-  line-height: 1.38;
+  line-height: 22px;
   text-align: center;
   padding: 0px;
   margin: auto;
-  margin-top: 0px;
+  margin-top: -20px;
 }
 
 .cost {
@@ -684,7 +679,7 @@ a {
 .button-hit {
   width: 203px;
   height: 46px;
-  margin: -10px 0px 0px 40px;
+  margin: 10px 0px 0px 40px;
 }
 
 .button-hit {
@@ -763,6 +758,7 @@ a {
 
 .straw-ground a {
   color: #323232;
+  line-height: 30px;
 }
 
 .straw-ground a:link, .straw-ground a:hover {
@@ -780,10 +776,11 @@ a {
 }
 
 .straw-ground p {
-  color: #000000;
+  color: #323232;
   font-size: 16px;
   margin-left: 19px;
   padding-top: 8px;
+  line-height: 22px;
 }
 
 /*----- Блок подписки: форма, кнопка, текст -----------------------------------*/
@@ -807,13 +804,14 @@ a {
   background: url('../img/info/substrate.png') no-repeat;
   width: 552px;
   height: 213px;
-   margin: 5px;
+  margin: 5px;
+
 }
 
 /*Текст в блоке*/
 .front-subs p {
   color: #5a5a5a;
-  line-height: 1.36;
+  line-height: 22px;
   font-size: 16px;
   margin-left: 22px;
   margin-top: 29px;
@@ -845,6 +843,7 @@ input[type='email']::placeholder {
   width: 130px;
   margin-top: 18px;
   margin-left: 7px;
+  line-height: 24px;
 }
 
 /* ----- Блок карты ----- */
@@ -988,6 +987,15 @@ footer {
   padding-right: 23px;
 }
 
+.document ul strong {
+	font-weight: bold;
+}
+
+.document ul a {
+	line-height: 18px;
+	font-weight: normal;
+}
+
 /*---- HTML Academy ----*/
 .logo-academy {
   font-size: 12px;
@@ -997,10 +1005,19 @@ footer {
   line-height: 0.3;
 }
 
+.logo-academy p {
+	line-height: 18px;
+	color: #fefefe;
+}
+
+.logo-academy p a {
+	text-decoration: underline;
+}
+
 /*----  Форма "Мы обязательно с вами свяжемся" ----*/
 .form-answer {
   display: none;
-  /*z-index: 1;*/
+  z-index: 1;
   position: fixed;
   width: 478px;
   min-height: 443px;
