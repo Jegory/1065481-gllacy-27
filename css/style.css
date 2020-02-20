@@ -64,10 +64,6 @@ nav img.logo-catalog {
 .main-catalog ul li a:active {
   box-shadow: inset 0px 2px 1px 0 #696969;
   background-color: #ededed;
-  margin-left: -18px;
-  margin-right: -18px;
-  padding-left: 18px;
-  padding-right: 18px;
 }
 
 .main-catalog li ul {
@@ -132,9 +128,11 @@ nav img.logo-catalog {
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
-  padding-left: 0px;
-  padding-right: 0px;
   margin-bottom: 0px;
+    margin-left: -18px;
+  margin-right: -18px;
+  padding-left: 18px;
+  padding-right: 18px;
 }
 
 .main-catalog li > ul li a:hover {
@@ -1015,7 +1013,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 a {
-	position: relative;
+/*	position: relative;*/
   color: #ffffff;
   text-decoration: none;
 }
