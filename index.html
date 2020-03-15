@@ -3,12 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>Gllacy - ice cream shop</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:700,900,500&subset=latin,cyrillic" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header>
+  	<input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+    <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+    <input class="visually-hidden" type="radio" id="product-3" name="toggle">
+  	<div class="site-wrapper">
+    <div class="container">
+    <header class="main-header">
       <nav>
         <img src="img/menu/logo.svg" class="logo" alt="Логотип магазина Глейси" width="154" height="64">
         <div class="main-catalog">
@@ -90,7 +95,37 @@
       </nav>
     </header>
     <main>
-      <div class="double-ice">
+
+				<section class="slider">
+					<div class="slider-controls">
+						<label tabindex="0" for="product-1">Первый слайд</label>
+						<label tabindex="0" for="product-2">Второй слайд</label>
+						<label tabindex="0" for="product-3">Третий слайд</label>
+					</div>
+
+					<ul class="slider-list">
+						<li class="slider-item slide" id="slide1">
+							<h3 class="slide-title">
+								Крем-брюле и пломбир с малиновым джемом
+							</h3>
+							<a class="button slide-button" href="#">Давайте оба!</a>
+						</li>
+						<li class="slider-item slide" id="slide2">
+							<h3 class="slide-title">
+								Шоколадный пломбир и лимонный сорбет
+							</h3>
+							<a class="button slide-button" href="#">Давайте оба!</a>
+						</li>
+						<li class="slider-item slide" id="slide3">
+							<h3 class="slide-title">
+								Пломбир с помадкой и клубничный щербет
+							</h3>
+							<a class="button slide-button" href="#">Давайте оба!</a>
+						</li>
+					</ul>
+				</section>
+
+<!--       <div class="double-ice">
         <img src="img/top/backgorund.png" class="ice-backgorund" alt="backgorund">
         <img src="img/top/ice-duoblePNG.png" class="photo-duoble" alt="double-ice">
         <p>Крем-брюле и пломбир с малиновым джемом</p>
@@ -100,7 +135,8 @@
           <input type="radio" name="slide">
           <input type="radio" name="slide">
         </form>
-      </div>
+      </div> -->
+
       <section>
         <div class="additives">
           <div class="raspberries">
@@ -128,7 +164,7 @@
                 </div>
               </a>
             </li>
-            <li class="box">
+            <li>
             	<a href="">
             		<div class="box">
                   <img src="img/top/hit.png" alt="hits">
@@ -139,7 +175,7 @@
                 </div>
               </a>
             </li>
-            <li class="box">
+            <li>
             	<a href="">
             		<div class="box">
                   <img src="img/top/hit.png" alt="hits">
@@ -149,8 +185,8 @@
                   <button class="button-hit" type="button">Быстрый просмотр</button>
                 </div>
               </a>
-            </li>
-            <li class="box">
+             </li>
+             <li>
             	<a href="">
             		<div class="box">
                   <img src="img/top/hit.png" alt="hits">
@@ -298,6 +334,8 @@
       </form>
       <button type="submit">Отправить</button>
     </section>
+  </div>
+  </div>
   </body>
 </html>
 

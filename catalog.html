@@ -111,12 +111,13 @@
     <main>
       <ul class="breadcrumbs">
          <li><a href="index.html">Главная</a></li>
-         <li><a href="">Каталог</a></li>
+         <li><a href="catalog.html">Каталог</a></li>
          <li class="last-page">Сливочное</li>
       </ul>
     	<h2 class="catalog-title">Сливочное мороженное</h2>
         <section class="ranges">
            <form action="https://echo.htmlacademy.ru" method="post">
+
            	 <fieldset class="sorting-ranges">
                <legend>Сортировка:</legend>
                <select name="sorting">
@@ -126,58 +127,72 @@
                  <option value="fat">по жирности</option>
                </select>
              </fieldset>
+
              <fieldset class="price-ranges">
-               <legend>Цена: 100 руб. – 500 руб.:</legend>
-               <ul class="filter-ranges-price">
-                 <li>
-							     <input type="range" name="price" value="price" id="price"
-							          min="100" max="500" step="50">
-							     <label for="price"></label>
-							   </li>
-               	</ul>
+               <legend class="parametr">
+               	 Цена:
+               	 <span class="parametr-range">
+               	   <label class="min-price">
+                     <input class="form-control" type="text" value="100" name="min-price" maxlength="3"> руб.
+                   </label>
+                   -
+                   <label class="max-price">
+                     <input class="form-control" type="text" value="500" name="max-price" maxlength="3"> руб.
+                   </label>
+               	 </span>
+               </legend>
+               <div class="range-controls">
+                 <div class="scale">
+                   <div class="bar" style="margin-left:10%; width: 60%"></div>
+                 </div>
+                 <div class="toggle toggle-min"></div>
+                 <div class="toggle toggle-max"></div>
+               </div>
               </fieldset>
-              <fieldset class="fat-ranges">
+
+              <fieldset class="fat-filter">
                 <legend>Жирность:</legend>
                 <ul class="radio-ranges-fat">
-                  <li>
-                    <input type="radio" name="fat-percent" value="zero" id="zero">
+                  <li class="filter-option">
+                    <input class="filter-input filter-input-radio visually-hidden" type="radio" name="fat-percent" value="zero" id="zero">
                     <label for="zero">0%</label>
                   </li>
-                  <li>
-                      <input type="radio" name="fat-percent" value="than" id="than" checked>
+                  <li class="filter-option">
+                      <input class="filter-input filter-input-radio visually-hidden" type="radio" name="fat-percent" value="than" id="than" checked>
                       <label for="than">до 10%</label>
                   </li>
-                  <li>
-                      <input type="radio" name="fat-percent" value="thirty" id="thirty">
+                  <li class="filter-option">
+                      <input class="filter-input filter-input-radio visually-hidden" type="radio" name="fat-percent" value="thirty" id="thirty">
                       <label for="thirty">до 30%</label>
                   </li>
-                  <li>
-                      <input type="radio" name="fat-percent" value="over-thirty" id="over-thirty">
+                  <li class="filter-option">
+                      <input class="filter-input filter-input-radio visually-hidden" type="radio" name="fat-percent" value="over-thirty" id="over-thirty">
                       <label for="over-thirty">выше 30%</label>
                   </li>
                 </ul>
               </fieldset>
+
               <fieldset class="fillers-ranges">
                 <legend>Наполнители:</legend>
                 <ul class="checkbox-ranges-fillers">
-                  <li>
-                    <input type="checkbox" name="choco" id="mark-chocolate" checked>
+                  <li class="filter-option">
+                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="choco" id="mark-chocolate" checked>
                     <label for="mark-chocolate">шоколадные</label>
                   </li>
-                  <li>
-                    <input type="checkbox" name="sugar" id="mark-sugar" checked>
+                  <li class="filter-option">
+                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="sugar" id="mark-sugar" checked>
                     <label for="mark-sugar">сахарные присыпки</label>
                   </li>
-                  <li>
-                    <input type="checkbox" name="fruits" id="check-fruits">
+                  <li class="filter-option">
+                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="fruits" id="check-fruits">
                     <label for="check-fruits">фрукты</label>
                   </li>
-                  <li>
-                      <input type="checkbox" name="syrups" id="check-syrups">
+                  <li class="filter-option">
+                      <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="syrups" id="check-syrups">
                       <label for="check-syrups">сиропы</label>
                   </li>
-                  <li>
-                    <input type="checkbox" name="jams" id="check-jams">
+                  <li class="filter-option">
+                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="jams" id="check-jams">
                     <label for="check-jams">джемы</label>
                   </li>
                 </ul>
@@ -308,6 +323,16 @@
               </a>
             </li>
           </ul>
+      </section>
+      <section>
+      	<ul class="site-pages">
+      		<li><a href="">1</a></li>
+      		<li><a href="">2</a></li>
+      		<li><a href="">3</a></li>
+      		<li><a href="">4</a></li>
+      		<li><a href="">5</a></li>
+      		<li><a href=""><img src="img_catalog/icon-right-small@3x.png" width="8" height="12" alt="next page"></a></li>
+      	</ul>
       </section>
     </main>
     <footer>
