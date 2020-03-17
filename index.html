@@ -41,7 +41,7 @@
                 </svg>
               </button>
               <form action="https://echo.htmlacademy.ru" method="post" class="form-search">
-                <input type="search" name="search" placeholder="Что ищем?">
+                <input type="search" name="search" placeholder="Крем-брюле">
               </form>
             </li>
             <li>
@@ -95,48 +95,34 @@
       </nav>
     </header>
     <main>
+			<section class="slider">
+				<div class="slider-controls">
+					<label tabindex="0" for="product-1">Первый слайд</label>
+					<label tabindex="0" for="product-2">Второй слайд</label>
+					<label tabindex="0" for="product-3">Третий слайд</label>
+				</div>
 
-				<section class="slider">
-					<div class="slider-controls">
-						<label tabindex="0" for="product-1">Первый слайд</label>
-						<label tabindex="0" for="product-2">Второй слайд</label>
-						<label tabindex="0" for="product-3">Третий слайд</label>
-					</div>
-
-					<ul class="slider-list">
-						<li class="slider-item slide" id="slide1">
-							<h3 class="slide-title">
-								Крем-брюле и пломбир с малиновым джемом
-							</h3>
-							<a class="button slide-button" href="#">Давайте оба!</a>
-						</li>
-						<li class="slider-item slide" id="slide2">
-							<h3 class="slide-title">
-								Шоколадный пломбир и лимонный сорбет
-							</h3>
-							<a class="button slide-button" href="#">Давайте оба!</a>
-						</li>
-						<li class="slider-item slide" id="slide3">
-							<h3 class="slide-title">
-								Пломбир с помадкой и клубничный щербет
-							</h3>
-							<a class="button slide-button" href="#">Давайте оба!</a>
-						</li>
-					</ul>
-				</section>
-
-<!--       <div class="double-ice">
-        <img src="img/top/backgorund.png" class="ice-backgorund" alt="backgorund">
-        <img src="img/top/ice-duoblePNG.png" class="photo-duoble" alt="double-ice">
-        <p>Крем-брюле и пломбир с малиновым джемом</p>
-        <button class="button-double" type="button">Давайте оба!</button>
-        <form action="https://echo.htmlacademy.ru" method="post" class="next-slide">
-          <input type="radio" name="slide">
-          <input type="radio" name="slide">
-          <input type="radio" name="slide">
-        </form>
-      </div> -->
-
+				<ul class="slider-list">
+					<li class="slider-item slide" id="slide1">
+						<h3 class="slide-title">
+							Крем-брюле и пломбир с малиновым джемом
+						</h3>
+						<a class="button slide-button" href="#">Давайте оба!</a>
+					</li>
+					<li class="slider-item slide" id="slide2">
+						<h3 class="slide-title">
+							Шоколадный пломбир и лимонный сорбет
+						</h3>
+						<a class="button slide-button" href="#">Давайте оба!</a>
+					</li>
+					<li class="slider-item slide" id="slide3">
+						<h3 class="slide-title">
+							Пломбир с помадкой и клубничный щербет
+						</h3>
+						<a class="button slide-button" href="#">Давайте оба!</a>
+					</li>
+				</ul>
+			</section>
       <section>
         <div class="additives">
           <div class="raspberries">
@@ -235,7 +221,7 @@
         <div class="strawberry">
           <div class="straw-ground">
     	      <p>Новое в нашем блоге</p>
-    	      <h2><a href="">10 способов сервировки <br> фруктовых щербетов к <br> столу</a></h2>
+    	      <h2><a href="">10 способов сервировки фруктовых щербетов к столу</a></h2>
           </div>
         </div>
       </section>
@@ -263,7 +249,7 @@
               <p>Для заказов по телефону:</p>
               <p class="content">8 812 450-25-25</p>
               <p>(c 10 до 20 ежедневно)</p>
-              <button class="button-contact" type="submit">Форма обратной связи</button>
+              <a class="button-contact" href="#">Форма обратной связи</a>
             </div>
         </div>
       </section>
@@ -313,29 +299,18 @@
       </div>
     </footer>
     <section class="form-answer">
-      <form action="https://echo.htmlacademy.ru" method="post" class="close">
-    	<button>
-    		<svg width="17px" height="17px" viewBox="0 0 11 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-			    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-			      <g id="cross-small" fill="#231F20" fill-rule="nonzero">
-			        <g id="Shape1">
-			          <polygon points="10.979 0.728 10.271 0.021 5.5 4.792 0.729 0.021 0.021 0.728 4.793 5.5 0.021 10.271 0.728 10.979 5.5 6.207 10.271 10.979 10.979 10.271 6.207 5.5"></polygon>
-			        </g>
-			      </g>
-			    </g>
-			  </svg>
-    	</button>
-      </form>
       <p>Мы обязательно вам ответим!</p>
       <form action="https://echo.htmlacademy.ru" method="post">
         <input class="name-answer" type="text" name="name-answer" placeholder="Имя Фамилия">
-        <input class="email-answer" type="email" name="email-answer" placeholder="Ваша почта для ответа">
-        <p><textarea class="text-answer" rows="7" cols="48" name="text" placeholder="Напишите что-нибудь..."></textarea></p>
+        <input class="email-answer" type="email" name="email-answer" placeholder="email@example.com">
+        <p><textarea class="text-answer" rows="7" cols="48" name="text" placeholder="В свободной форме"></textarea></p>
+        <button class="send-modal"type="submit">Отправить</button>
       </form>
-      <button type="submit">Отправить</button>
+        <button class="modal-close" type="button"></button>
     </section>
   </div>
   </div>
+  <script src="js/script.js"></script>
   </body>
 </html>
 

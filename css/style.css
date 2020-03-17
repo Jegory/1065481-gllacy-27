@@ -91,6 +91,7 @@ nav img.logo-catalog {
 }
 
 .main-catalog ul li a {
+	position:relative;
   display: block;
   padding: 9px 13px 10px 14px;
   font-size: 16px;
@@ -121,7 +122,15 @@ nav img.logo-catalog {
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
   width: 143px;
   min-height: 171px;
+}
 
+.main-catalog ul li a::before {
+	position: absolute;
+	content:'';
+	height: 1px;
+	background-color: rgba(255,255,255, 0.2);
+	width: calc(100% - 27px);
+	bottom: 10px;
 }
 
 /*----- Меню в каталоге -----*/
@@ -259,15 +268,20 @@ nav img.logo-catalog {
   justify-content: center;
 }
 
-.extra-catalog .entry svg, .extra-catalog .basket svg {
+.extra-catalog .entry svg,
+.extra-catalog .basket svg {
   margin-right: 6px;
 }
 
-.extra-catalog .search, .extra-catalog .entry, .extra-catalog .basket {
+.extra-catalog .search,
+.extra-catalog .entry,
+.extra-catalog .basket {
   margin-right: 9px;
 }
 
-.extra-catalog .search:hover, .extra-catalog .entry:hover, .extra-catalog .basket:hover {
+.extra-catalog .search:hover,
+.extra-catalog .entry:hover,
+.extra-catalog .basket:hover {
   margin-right: 9px;
 }
 
@@ -444,11 +458,20 @@ nav img.logo-catalog {
   padding-right: 10px;
 }
 
-.favorites-basket1 p, .favorites-basket2 p {
+.favorites-basket1 p,
+.favorites-basket2 p {
   color: #000000;
   font-size: 13px;
   font-weight: 100;
   text-align: left;
+}
+
+.favorites-basket1 span,
+.favorites-basket2 span {
+	color: #999999;
+	font-size: 13px;
+	line-height: 16px;
+	font-weight: 100;
 }
 
 .favorites-basket2 {
@@ -468,6 +491,7 @@ nav img.logo-catalog {
   color: #323232;
   margin-left: 420px;
   margin-top: 35px;
+  font-weight: bold;
 }
 
 .form-basket button {
@@ -543,6 +567,16 @@ nav img.logo-catalog {
   position: relative;
 
   margin-right: 20px;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+	content: '';
+	height: 1px;
+	background-color: rgba(255,255,255, 0.2);
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
 }
 
 .breadcrumbs li::after {
@@ -750,6 +784,17 @@ nav img.logo-catalog {
 
 .range-controls .toggle-max:hover {
   left: 130px;
+}
+
+.toggle::before {
+	content: "";
+	width: 4px;
+  height: 4px;
+  background-color: #ababab;
+  border-radius: 50%;
+  left: -2px;
+  position: absolute;
+  top: -2px;
 }
 
 /* ---- Фильтр жирности и наполнителей ---- */
@@ -996,7 +1041,7 @@ input[type="radio"].visually-hidden {
   padding-bottom: 25px;
   font-size: 60px;
   line-height: 60px;
-  font-weight: 800;
+  font-weight: bold;
 }
 
 .button {
@@ -1076,79 +1121,6 @@ input[type="radio"].visually-hidden {
   background-color: #ffffff;
 }
 
-/*.main-header {
-
-  height: 100px;
-  background-color: rgba(0, 0, 0, 0.4);*/
-
-/*.container {
-  width: 900px;
-  margin: 0 auto;
-  padding: 0 20px;
-}*/
-
-
-
-/*  не реализованы слайдер*/
-/*.double-ice {
-  width: 647px;
-  height: 584px;
-  margin: auto;
-}
-
-.ice-backgorund {
-  position: relative;
-  width: 1065px;
-  height: 859px;
-  margin: auto;
-  bottom: 170px;
-}
-
-.photo-duoble {
-  position: relative;
-  bottom: 925px;
-}
-
-.double-ice p {
-  position: relative;
-  bottom: 1263px;
-  right: 29px;
-  width: 701px;
-  height: 116px;
-  font-size: 60px;
-  font-weight: bold;
-  line-height: 60px;
-  text-align: center;
-  color: #ffffff;
-}*/
-
-/*Кнопка - Давайте оба*/
-/*.button-double {
-  position: relative;
-  bottom: 1263px;
-  width: 280px;
-  height: 64px;
-  font-size: 32px;
-  line-height: 1.38;
-  border-radius: 35px;
-  margin-left: 183px;
-  margin-top: -33px;
-}*/
-
-/* ----- кнопки  для переключения слайдов в карусели -----*/
-
-/*.next-slide {
-  display: flex;
-  justify-content: space-around;
-  align-items: baseline;
-  position: relative;
-  bottom: 1307px;
-  right: 248px;
-  width: 80px;
-  height: 20px;
-  border: 1px solid #ffffff;
-}*/
-
 /* ----- Контейнер для добавок: малина + шоколад -----*/
 .additives {
   display: flex;
@@ -1173,7 +1145,7 @@ input[type="radio"].visually-hidden {
   height: 49px;
   line-height: 24px;
   border-radius: 35px;
-  margin-top: 40px;
+  margin-top: 20px;
   margin-left: 374px;
 }
 
@@ -1195,7 +1167,7 @@ input[type="radio"].visually-hidden {
   font-size: 18px;
   line-height: 24px;
   border-radius: 35px;
-  margin-top: 40px;
+  margin-top: 20px;
   margin-left: 350px;
 }
 
@@ -1203,7 +1175,9 @@ input[type="radio"].visually-hidden {
   font-size: 18px;
   line-height: 22px;
   color: #ffffff;
-  margin: 0px 22px;
+  margin-right: 7px;
+  font-weight: bold;
+  margin-left: 20px;
 }
 
 .raspberries h2, .chocolat h2 {
@@ -1279,6 +1253,7 @@ input[type="radio"].visually-hidden {
 }
 
 .hit p {
+	position: relative;
 	width: 253px;
   font-size: 16px;
   font-weight: 500;
@@ -1288,6 +1263,26 @@ input[type="radio"].visually-hidden {
   padding: 0px;
   margin: auto;
   margin-top: -20px;
+}
+
+.hit p::before {
+	position: absolute;
+	content: '';
+	height: 1px;
+	background-color: rgba(255,255,255, 0.2);
+	width: 100%;
+	bottom: 0;
+	left: 0;
+}
+
+.hit p::after {
+	position: absolute;
+	content: '';
+  height: 1px;
+  background-color: rgba(255,255,255, 0.2);
+  width: 84%;
+  top: 20px;
+  left: 21px;
 }
 
 .cost {
@@ -1390,7 +1385,6 @@ a:hover {
   justify-content: center;
 }
 
-/*----- Блок инфо: Клубника "Новое в нашем блоге" -----------------------------------*/
 .strawberry {
   display: flex;
   width: 560px;
@@ -1407,14 +1401,17 @@ a:hover {
 .straw-ground a {
   color: #323232;
   line-height: 30px;
+  width: 281px;
+  display: block;
 }
 
-.straw-ground a:link, .straw-ground a:hover {
+.straw-ground a:link,
+.straw-ground a:hover {
   color: #F07B63;
 }
 
 .straw-ground h2 {
-  text-decoration: underline;
+  text-decoration-skip-ink: none;
   margin-left: 19px;
   margin-top: -10px;
   color: #323232;
@@ -1523,13 +1520,37 @@ input[type='email']::placeholder {
 }
 
 /*Кнопка обратной связи*/
+
 .button-contact {
   display: inline-block;
   width: 254px;
   height: 44px;
-  line-height: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.33;
   border-radius: 35px;
   margin-top: 12px;
+  padding-top: 10px;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+  background: #f26843;
+  background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  border-radius: 50px;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+  border: none;
+  cursor: pointer;
+}
+
+.button-contact:hover {
+  background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.button-contact:active {
+  background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 
 /*----  Карта  ----*/
@@ -1562,8 +1583,8 @@ input[type='email']::placeholder {
 .site-pages {
 	width: 167px;
 	display: flex;
-	justify-content: space-between;
-	margin-left: 960px;
+	justify-content: space-around;
+	margin-left: 995px;
 	margin-top: 45px;
 }
 
@@ -1583,15 +1604,20 @@ input[type='email']::placeholder {
   background-color: #ffffff;
 }
 
-.site-pages li:first-child a {
+.site-pages li:nth-child(2) a {
 	background-color: #ffffff;
 	color: #000000;
 	padding: 5px 10px 5px 10px;
 	border-radius: 50px;
 }
 
+.site-pages li:nth-child(1) a {
+	background-color: transparent;
+	border-radius: 0px;
+	margin-right: 15px;
+}
 
-.site-pages li:nth-child(6) a {
+.site-pages li:nth-child(7) a {
 	background-color: transparent;
 	border-radius: 0px;
 }
@@ -1661,7 +1687,6 @@ footer {
   font-size: 13px;
   font-weight: 100;
   line-height: 22px;
-  text-decoration: underline;
 }
 
 .document ul {
@@ -1677,8 +1702,18 @@ footer {
 }
 
 .document ul a {
+	position: relative;
 	line-height: 18px;
 	font-weight: normal;
+}
+
+.document ul a::before {
+	content: '';
+	height: 1px;
+	background-color: rgba(255,255,255, 0.2);
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
 }
 
 /*---- HTML Academy ----*/
@@ -1700,6 +1735,11 @@ footer {
 }
 
 /*----  Форма "Мы обязательно с вами свяжемся" ----*/
+
+.modal-show {
+	display: block;
+}
+
 .form-answer {
   display: none;
   z-index: 1;
@@ -1724,7 +1764,7 @@ footer {
 }
 
 .name-answer {
-	 position: absolute;
+	position: absolute;
 	top: 40px;
   font-size: 16px;
   line-height: 1.71;
@@ -1761,13 +1801,14 @@ footer {
   color: #999999;
   font-weight: 100;
   top: 170px;
+  resize: none;
 }
 
 .text-answer:hover {
   border: solid 2px rgba(154, 154, 154, 0.52);
 }
 
-.form-answer button {
+.form-answer .send-modal {
   position: absolute;
   width: 140px;
   height: 43px;
@@ -1776,16 +1817,40 @@ footer {
   bottom: 27px;
 }
 
-.close button {
+.modal-close,
+.modal-close:hover,
+.modal-close:active {
   position: absolute;
-  top: 18px;
-  right: 17px;
+  top: 15px;
+  right: 15px;
   width: 18px;
   height: 18px;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  cursor: pointer;
-  background: #f8f7f4;
+  background-color: transparent;
+  background-image: none;
   box-shadow: none;
+  border: none;
+  cursor: pointer;
 }
+
+.modal-close::before,
+.modal-close::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: -2px;
+  width: 22px;
+  height: 2px;
+  background-color: #231f20;
+}
+
+.modal-close::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.modal-close::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+
