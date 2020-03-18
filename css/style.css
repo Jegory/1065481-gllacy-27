@@ -1,13 +1,19 @@
-/*----- Общие стили -----*/
 body {
-  width: 1200px;
-  margin: 0 auto;
   background-color: #849d8f;
-  /*background: url('../img/gllacy-index-1000.svg') no-repeat fixed;*/
   font-family: 'Roboto', 'Tahoma', sans-serif;
   color: #ffffff;
 }
 
+.catalog {
+	width: 1200px;
+  margin: 0 auto;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+
+}
 /*----- Button -----*/
 button {
   box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
@@ -158,6 +164,7 @@ nav img.logo-catalog {
   padding-left: 18px;
   padding-right: 18px;
 }
+
 /*----- Общие стили меню -----*/
 /*----- Всплывающий список "Новинка" -----*/
 .main-catalog a {
@@ -348,7 +355,7 @@ nav img.logo-catalog {
   height: 84px;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
   margin-left: -307px;
-   background-color: #f8f7f4;
+  background-color: #f8f7f4;
   border-radius: 5px;
 }
 
@@ -552,7 +559,6 @@ nav img.logo-catalog {
   justify-content: flex-start;
   margin: -60px 0px 5px 27px;
   padding: 0;
-
   list-style: none;
 }
 
@@ -563,11 +569,30 @@ nav img.logo-catalog {
   line-height: 16px;
 }
 
+.breadcrumbs a:hover,
+.breadcrumbs a:active {
+	color: #ffbc9e;
+}
+
+.breadcrumbs li:hover:not(:last-child)::after {
+	background-color: #ffbc9e;
+}
+
 .breadcrumbs li {
   position: relative;
-
   margin-right: 20px;
 }
+
+/*.breadcrumbs li::after {
+  content: "»";
+  position: absolute;
+  top: 5px;
+  right: -12px;
+  width: 6px;
+  height: 6px;
+  font-size: 15px;
+  line-height: 5px;
+}*/
 
 .breadcrumbs li:not(:last-child)::after {
 	content: '';
@@ -579,19 +604,6 @@ nav img.logo-catalog {
 	left: 0;
 }
 
-.breadcrumbs li::after {
-  content: "»";
-  position: absolute;
-  top: 5px;
-  right: -12px;
-
-  width: 6px;
-  height: 6px;
-
-  font-size: 15px;
-  line-height: 5px;
-}
-
 .breadcrumbs li:last-child {
   margin-right: 0;
 }
@@ -601,7 +613,6 @@ nav img.logo-catalog {
 }
 
  /*----- RANGE------------------------*/
-
 /* ---- Общий контейнер ---- */
 .ranges {
 	position: relative;
@@ -634,12 +645,12 @@ nav img.logo-catalog {
   list-style: none;
   padding: 0;
   margin: 0;
-  }
+}
 
  .ranges li {
   padding: 0;
   margin: 0;
- }
+}
 
 .ranges label {
   font-size: 16px;
@@ -707,9 +718,8 @@ nav img.logo-catalog {
 }
 
 /* ---- Фильтр цены ---- */
-
 .price-ranges {
- width: 222px;
+  width: 222px;
   height: 39px;
   left: 210px;
   top: 5px;
@@ -724,7 +734,6 @@ nav img.logo-catalog {
   font-size: 14px;
   line-height: 16px;
   color: #ffffff;
-
   background-color: transparent;
   border: none;
   box-shadow: none;
@@ -828,7 +837,7 @@ nav img.logo-catalog {
 }
 
 .fillers-ranges li {
-    padding: 9px 14px 9px 4px;
+  padding: 9px 14px 9px 4px;
   margin-left: 14px;
 }
 
@@ -1207,6 +1216,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-wrap: wrap;
   margin-top: 30px;
+  margin-bottom: -70px;
   justify-content: space-around;
 }
 
@@ -1231,10 +1241,10 @@ input[type="radio"].visually-hidden {
 
 .hit img[alt$="hits"] {
   position: absolute;
-  	width: 61px;
-    height: 61px;
-    padding: 0;
-    margin: 10px 0px 0px 10px;
+  width: 61px;
+  height: 61px;
+  padding: 0;
+  margin: 10px 0px 0px 10px;
 }
 
 .hit span {
@@ -1285,6 +1295,10 @@ input[type="radio"].visually-hidden {
   left: 21px;
 }
 
+/*.hit p:nth-child()::after  {
+
+}*/
+
 .cost {
   margin: -55px 0px 30px 10px;
 }
@@ -1304,10 +1318,6 @@ a:hover {
   margin-bottom: 30px;
 }
 
-.box:not(:first-child) {
-
-}
-
 .box:hover {
 	position: absolute;
   width: 293px;
@@ -1318,18 +1328,15 @@ a:hover {
   padding-bottom: 15px;
 }
 
-.button-hit {
+.hit ul li a .box .button-hit {
   width: 203px;
   height: 46px;
   margin: 10px 0px 0px 45px;
+  visibility: hidden;
 }
 
-.button-hit {
-  display: none;
-}
-
-.hit ul li:hover .button-hit {
-  display:block;
+.hit ul li a:hover .button-hit {
+  visibility: visible;
 }
 
  /*----- Фон 'Вафля' для инфо-блока магазина Глейси ------------------------*/
@@ -1340,7 +1347,7 @@ a:hover {
   margin-bottom: 35px;
 }
 
- h1 {
+h1 {
   padding-top: 20px;
   padding-left: 20px;
   left: 20px;
@@ -1412,6 +1419,7 @@ a:hover {
 
 .straw-ground h2 {
   text-decoration-skip-ink: none;
+  text-decoration: underline;
   margin-left: 19px;
   margin-top: -10px;
   color: #323232;
@@ -1450,7 +1458,6 @@ a:hover {
   width: 552px;
   height: 213px;
   margin: 5px;
-
 }
 
 /*Текст в блоке*/
@@ -1492,7 +1499,6 @@ input[type='email']::placeholder {
 }
 
 /* ----- Блок карты ----- */
-
 /* Форма обратной связи */
 .content {
   font-size: 18px;
@@ -1584,7 +1590,7 @@ input[type='email']::placeholder {
 	width: 167px;
 	display: flex;
 	justify-content: space-around;
-	margin-left: 995px;
+	margin-left: 970px;
 	margin-top: 45px;
 }
 
@@ -1622,8 +1628,18 @@ input[type='email']::placeholder {
 	border-radius: 0px;
 }
 
+hr {
+	width: 1146px;
+  border: 0;
+  height: 1px;
+  background: rgba(255,255,255,0.3);
+}
+
 /*---- FOOTER ----*/
 footer {
+	width: 1200px;
+    margin: 0 auto;
+
   display: flex;
   justify-content: space-between;
   height: 100px;
@@ -1735,7 +1751,6 @@ footer {
 }
 
 /*----  Форма "Мы обязательно с вами свяжемся" ----*/
-
 .modal-show {
 	display: block;
 }
