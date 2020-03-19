@@ -2,6 +2,7 @@ body {
   background-color: #849d8f;
   font-family: 'Roboto', 'Tahoma', sans-serif;
   color: #ffffff;
+  border: 1px solid #ffffff;
 }
 
 .catalog {
@@ -97,15 +98,22 @@ nav img.logo-catalog {
 }
 
 .main-catalog ul li a {
+  height: 32px;
 	position:relative;
   display: block;
-  padding: 9px 13px 10px 14px;
+  padding: 9px 13px 10px 13px;
   font-size: 16px;
   line-height: 18px;
   color: #ffffff;
   text-decoration: none;
   font-weight: bold;
   margin-bottom: 5px;
+  margin-top: -2px;
+  padding-top: 8px;
+  padding-right: 14px;
+}
+
+
 }
 
 .main-catalog ul li a:hover {
@@ -153,6 +161,10 @@ nav img.logo-catalog {
 }
 
 .main-catalog .page-catalog::before {
+	display: none;
+}
+
+.main-catalog ul li a:hover::before {
 	display: none;
 }
 /*----- выбранное подменю каталога -----*/
@@ -245,12 +257,25 @@ nav img.logo-catalog {
 /*---- Правый блок в навигации (поиск, вход, корзина) ----*/
 .extra-catalog {
   display: flex;
-  margin-left: 320px;
+  margin-left: 323px;
+  margin-top: 7px;
+}
+
+.extra-catalog-index {
+	display: flex;
+  margin-left: 338px;
   margin-top: 7px;
 }
 
 /*---- текст ниже правого меню ----*/
 .contacts {
+	width: 170px;
+	margin-left: -50px;
+	font-weight: bold;
+	text-align: right;
+}
+
+.contacts-index {
 	width: 170px;
 	margin-left: -68px;
 	font-weight: bold;
@@ -260,7 +285,8 @@ nav img.logo-catalog {
 .time {
   font-size: 14px;
   line-height: 16px;
-  padding-top: 5px;
+  padding-top: 2px;
+  padding-right: 3px;
 }
 
  .number {
@@ -277,8 +303,13 @@ nav img.logo-catalog {
 
 .extra-catalog > ul {
   display: flex;
+  margin-left: -19px;
 }
 
+.extra-catalog-index > ul {
+	display: flex;
+  margin-left: -15px;
+}
 .extra-catalog button {
   display: flex;
   align-items: center;
@@ -305,18 +336,29 @@ nav img.logo-catalog {
 .search {
   width: 33px;
   height: 33px;
+  padding-bottom: 4px;
 }
 
 .entry {
   width: 93px;
   height: 32px;
+  padding-bottom: 4px;
 }
 
 .basket {
-  width: 100px;
+  width: 117px;
   height: 32px;
   padding-left: 6px;
   padding-right: 6px;
+  padding-bottom: 5px;
+}
+
+.basket-index {
+	width: 100px;
+  height: 33px;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-bottom: 5px;
 }
 
 /*смена фона кнопок svg*/
@@ -592,6 +634,7 @@ nav img.logo-catalog {
 .breadcrumbs li {
   position: relative;
   margin-right: 20px;
+  margin-top: 5px;
 }
 
 .breadcrumbs li:not(:last-child)::before {
@@ -630,7 +673,7 @@ nav img.logo-catalog {
 	width: 870px;
 	min-height: 145px;
 	padding: 5px;
-	margin: 27px;
+  margin: 20px 0px 0px 27px;
 }
 
 .ranges form {
@@ -649,7 +692,7 @@ nav img.logo-catalog {
   font-weight: 500;
   line-height: 16px;
   padding: 0;
-  margin: 0px 0px 5px 10px;
+  margin: 0px 0px 5px 12px;
 }
 
 .ranges ul {
@@ -686,9 +729,11 @@ nav img.logo-catalog {
 
 .sorting-ranges select[name="sorting"] {
   box-sizing: border-box;
-  height: 39px;
+  width: 194px;
+  height: 37px;
   padding: 8px 15px;
   padding-right: 35px;
+  margin-left: -5px;
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
@@ -728,6 +773,10 @@ nav img.logo-catalog {
   outline: none;
 }
 
+option {
+	font-size: 14px;
+}
+
 /* ---- Фильтр цены ---- */
 .price-ranges {
   width: 222px;
@@ -740,6 +789,7 @@ nav img.logo-catalog {
   box-sizing: border-box;
   width: 24px;
   padding: 0;
+  padding-bottom: 3px;
   font: inherit;
   font-weight: 500;
   font-size: 14px;
@@ -758,9 +808,10 @@ nav img.logo-catalog {
 .range-controls {
   position: relative;
   box-sizing: border-box;
-  width: 220px;
-  height: 35px;
-  padding: 15px 20px;
+  width: 218px;
+  height: 37px;
+  margin-top: -2px;
+  padding: 16px 25px 16px 19px;
   background-color: rgba(248, 247, 244, 0.2);
   border-radius: 20px;
 }
@@ -778,8 +829,7 @@ nav img.logo-catalog {
 
 .range-controls .toggle {
   position: absolute;
-  top: 7px;
-  left: 0;
+  top: 8px;
   width: 6px;
   height: 6px;
   padding: 0;
@@ -799,11 +849,11 @@ nav img.logo-catalog {
 }
 
 .range-controls .toggle-max {
-  left: 132px;
+  left: 130px;
 }
 
 .range-controls .toggle-max:hover {
-  left: 132px;
+  left: 130px;
 }
 
 .toggle::before {
@@ -844,7 +894,8 @@ nav img.logo-catalog {
 .fillers-ranges {
   width: 703px;
   height: 37px;
-  bottom: 25px;
+  bottom: 28px;
+  right: 169px;
 }
 
 .fillers-ranges li {
@@ -882,7 +933,7 @@ input[type="radio"].visually-hidden {
 }
 
 .fat-filter .filter-option {
-  margin-right: 16px;
+  margin-right: 14px;
 }
 
 .filter-option:last-child {
@@ -976,8 +1027,8 @@ input[type="radio"].visually-hidden {
 	position: absolute;
 	width: 144px;
 	height: 37px;
-	right: 5px;
-	bottom: 5px;
+	right: 10px;
+	bottom: 8px;
   display: inline-block;
   font-weight: 500;
   font-size: 16px;
@@ -1058,7 +1109,7 @@ input[type="radio"].visually-hidden {
 .slide-title {
   width: 700px;
   margin: 0 auto;
-  margin-top: -85px;
+  margin-top: -83px;
   padding-bottom: 25px;
   font-size: 60px;
   line-height: 60px;
@@ -1066,11 +1117,15 @@ input[type="radio"].visually-hidden {
 }
 
 .button {
+	width: 280px;
+  height: 64px;
   display: inline-block;
-  padding: 12px 44px;
+  padding: 12px 40px;
+  margin-top: 3px;
   margin-bottom: 120px;
-  font-weight: 600;
-  font-size: 31px;
+  font-weight: bold;
+  font-size: 32px;
+  letter-spacing: normal;
   line-height: 41px;
   text-align: center;
   color: #ffffff;
@@ -1098,15 +1153,15 @@ input[type="radio"].visually-hidden {
 .slider-controls {
   position: absolute;
   bottom: 140px;
-  margin-left: 30px;
+  margin-left: 27px;
   z-index: 20;
   font-size: 0;
 }
 
 .slider-controls label {
   display: inline-block;
-  width: 17px;
-  height: 17px;
+  width: 21px;
+  height: 21px;
   margin-right: 8px;
   vertical-align: top;
   background-color: transparent;
@@ -1158,6 +1213,7 @@ input[type="radio"].visually-hidden {
   z-index: 1;
   width: 560px;
   height: 230px;
+  margin-top: 5px;
   margin-right: 13px;
   background: url('../img/top/raspberries.png') no-repeat;
   border-radius: 10px;
@@ -1166,11 +1222,11 @@ input[type="radio"].visually-hidden {
 /*Кнопка - Хочу варенья*/
 .button-raspberries {
   display: inline-block;
-  width: 166px;
-  height: 49px;
+  width: 165px;
+  height: 46px;
   line-height: 24px;
   border-radius: 35px;
-  margin-top: 20px;
+  margin-top: 27px;
   margin-left: 374px;
 }
 
@@ -1180,6 +1236,7 @@ input[type="radio"].visually-hidden {
   width: 560px;
   height: 230px;
   margin-left: 13px;
+  margin-top: 5px;
   background: url('../img/top/chocolate.png') no-repeat;
   border-radius: 10px;
 }
@@ -1187,22 +1244,24 @@ input[type="radio"].visually-hidden {
 /*Кнопка - Хочу шоколадки*/
 .button-chocolat {
   display: inline-block;
-  width: 190px;
-  height: 48px;
+  width: 189px;
+  height: 45px;
   font-size: 18px;
   line-height: 24px;
   border-radius: 35px;
-  margin-top: 20px;
+  margin-top: 27px;
   margin-left: 350px;
 }
 
 .raspberries p, .chocolat p {
+	width: 513px;
   font-size: 18px;
   line-height: 22px;
   color: #ffffff;
   margin-right: 7px;
   font-weight: bold;
   margin-left: 20px;
+  margin-top: -6px;
 }
 
 .raspberries h2, .chocolat h2 {
@@ -1210,18 +1269,22 @@ input[type="radio"].visually-hidden {
   font-weight: bold;
   line-height: 41px;
   color: #ffffff;
-  margin-left: 22px;
-  margin-top: 15px;
-  margin-bottom: 20px;ß
+  margin-left: 20px;
+  margin-top: 16px;
+  margin-bottom: 20px;
 }
 
   /*----- ХИТ Картинки с мороженным ------------------------*/
 .hit {
-  width: 1200px;
+  width: 1173px;
+  margin-top: 39px;
+  margin-left: 14px;
 }
 
 .hit-catalog {
-  width: 1200px;
+  width: 1173px;
+  margin-top: 32px;
+  margin-left: 14px;
   min-height: 1114px;
 
 }
@@ -1248,10 +1311,9 @@ input[type="radio"].visually-hidden {
   height: 267px;
 	margin: 0;
 	padding: 0;
-  margin-top: 6px;
   margin-left: 13px;
   margin-right: 14px;
-  margin-bottom: 16px;
+  margin-bottom: 19px;
 
 }
 
@@ -1260,7 +1322,6 @@ input[type="radio"].visually-hidden {
   width: 61px;
   height: 61px;
   padding: 0;
-  margin: 10px 0px 0px 10px;
 }
 
 .hit span {
@@ -1280,7 +1341,7 @@ input[type="radio"].visually-hidden {
 
 .hit p {
 	position: relative;
-	width: 253px;
+	width: 257px;
   font-size: 16px;
   font-weight: 500;
   font-style: normal;
@@ -1288,7 +1349,7 @@ input[type="radio"].visually-hidden {
   text-align: center;
   padding: 0px;
   margin: auto;
-  margin-top: -20px;
+  margin-top: -22px;
 }
 
 .hit p::after {
@@ -1421,7 +1482,10 @@ input[type="radio"].visually-hidden {
 }
 
 .cost {
-  margin: -55px 0px 30px 10px;
+  margin: -74px 0px 42px 10px;
+}
+.rub {
+	margin-left: 6px;
 }
 
 a {
@@ -1467,19 +1531,27 @@ a:hover {
  /*----- Фон 'Вафля' для инфо-блока магазина Глейси ------------------------*/
 .waffle {
   background: url(../img/info/waffle-big.png) no-repeat;
-  width: 1165px;
+  width: 1146px;
+  height: 306px;
   margin-left: 27px;
   margin-bottom: 35px;
+  margin-top: 20px;
+  border-radius: 0 0 5px 5px;
 }
 
 h1 {
-  padding-top: 20px;
+  padding-top: 25px;
   padding-left: 20px;
-  left: 20px;
-  width: 100%;
+  width: 1095px;
+  height: 54px;
+
   font-size: 24px;
   font-weight: 500;
-  line-height: 30px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: left;
   color: #323232;
 }
 
@@ -1495,22 +1567,55 @@ h1 {
 }
 
 .left, .right {
-  width: 555px;
+  width: 560px;
   font-size: 16px;
   line-height: 22px;
   color: #323232;
 }
 
 .info-shop li {
+	padding: 0;
+	margin: 0;
   margin-left: 35px;
   margin-top: -45px;
 }
 
-.info-shop img {
-  margin-left: 20px;
-  margin-bottom: -20px;
+.info-shop .right li {
+	 margin-left: 45px;
+  margin-top: -45px;
 }
 
+.left .left-one {
+	margin-top: -37px;
+}
+
+.left .left-two {
+	margin-top: -45px;
+}
+
+.info-shop .ice {
+  margin-left: 20px;
+  margin-bottom: -20px;
+  margin-top: 23px;
+}
+
+.info-shop .eco {
+  margin-left: 20px;
+  margin-bottom: -20px;
+  margin-top: -5px;
+}
+
+.info-shop .cow {
+  margin-left: 25px;
+  margin-bottom: -20px;
+  margin-top: 24px;
+}
+
+.info-shop .thermometer {
+  margin-left: 25px;
+  margin-bottom: -20px;
+  margin-top: 0px;
+}
 /*----- контейнер для .strawberry(блок клубника) и .subs-ground(блок подписка) ---------------------------*/
 .subscription {
   display: flex;
@@ -1528,6 +1633,7 @@ h1 {
   background: url('../img/info/strawberry.png') no-repeat;
   width: 560px;
   height: 220px;
+  margin-top: 5px;
 }
 
 .straw-ground a {
@@ -1557,7 +1663,7 @@ h1 {
   color: #323232;
   font-size: 16px;
   margin-left: 19px;
-  padding-top: 8px;
+  padding-top: 6px;
   line-height: 22px;
 }
 
@@ -1575,6 +1681,7 @@ h1 {
   background: url('../img/info/bg-post.svg') no-repeat;
   width: 560px;
   height: 220px;
+  margin-top: 4px;
 }
 
 /*Передний, серый фон блока*/
@@ -1590,22 +1697,24 @@ h1 {
   color: #5a5a5a;
   line-height: 22px;
   font-size: 16px;
-  margin-left: 22px;
+  margin-left: 21px;
   margin-top: 29px;
+  margin-bottom: 10px;
   width: 517px;
   opacity: 0.8;
 }
 
 /*Форма*/
 .form-email {
-  height: 42px;
-  width: 345px;
+	width: 368px;
+  height: 44px;
   border-radius: 5px;
   border: solid 1px rgba(178, 178, 178, 0.52);
   background-color: #ffffff;
-  padding-left: 15px;
+  padding-bottom: 2px;
+  padding-left: 14px;
   margin-left: 20px;
-  margin-top: 24px;
+  margin-top: 26px;
 }
 
 input[type='email']::placeholder {
@@ -1617,9 +1726,10 @@ input[type='email']::placeholder {
 /*Кнопка обратной связи*/
 .front-subs button {
   display: inline-block;
-  width: 130px;
+  width: 129px;
+  height: 44px;
   margin-top: 18px;
-  margin-left: 7px;
+  margin-left: 9px;
   line-height: 24px;
 }
 
@@ -1630,7 +1740,8 @@ input[type='email']::placeholder {
   width: 230px;
   font-weight: bold;
   line-height: 24px;
-  margin-top: -10px;
+  margin-left: 2px;
+  margin-top: -13px;
 }
 
 .contact {
@@ -1660,8 +1771,8 @@ input[type='email']::placeholder {
   font-weight: bold;
   line-height: 1.33;
   border-radius: 35px;
-  margin-top: 12px;
-  padding-top: 10px;
+  margin-top: 10px;
+  padding-top: 11px;
   text-align: center;
   color: #ffffff;
   text-decoration: none;
@@ -1686,27 +1797,30 @@ input[type='email']::placeholder {
 
 /*----  Карта  ----*/
 .map {
-  width: auto;
+  width: 1200px;
   height: 430px;
+  object-fit: contain;
   margin-top: 41px;
 }
 
 .foto-map {
+	width: 1200px;
+	height: 430px;
   position: relative;
 }
 
 /*----  Иконка рожка на карте  ----*/
 .icon-map {
   position: absolute;
-  margin-top: -315px;
-  margin-left: 270px;
+  margin-top: -295px;
+  margin-left: 267px;
   z-index: 2;
 }
 
 .contact {
   position: absolute;
   margin-left: -330px;
-  margin-top: 75px;
+  margin-top: 63px;
   z-index: 1;
 }
 
@@ -1715,12 +1829,20 @@ input[type='email']::placeholder {
 	width: 167px;
 	display: flex;
 	justify-content: space-around;
-	margin-left: 970px;
-	margin-top: 45px;
+	margin-left: 971px;
+	margin-top: 19px;
+	margin-bottom: 33px;
+	font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.13;
+  letter-spacing: normal;
+  text-align: right;
 }
 
 .site-pages li a {
-	padding: 5px 10px 5px 10px;
+	padding: 5px 10px;
 	border-radius: 50px;
 	color: #ffffff;
 }
@@ -1751,6 +1873,7 @@ input[type='email']::placeholder {
 .site-pages li:nth-child(7) a {
 	background-color: transparent;
 	border-radius: 0px;
+	padding-left: 20px;
 }
 
 hr {
@@ -1775,7 +1898,8 @@ footer {
 /*---- кнопки соцсетей----*/
 .network {
   width: 224px;
-  margin-left: -13px;
+  margin-left: -12px;
+  margin-top: -18px;
 }
 
 .network ul {
@@ -1818,8 +1942,8 @@ footer {
 
 /*---- инфо о компании ----*/
 .heart {
-  margin-top: -20px;
-  margin-left: 30px;
+  margin-top: -5px;
+  margin-left: 29px;
 }
 
 .document {
@@ -1836,6 +1960,10 @@ footer {
   flex-direction: column;
   margin-left: -33px;
   padding-right: 23px;
+  margin-top: -10px;
+}
+
+
 }
 
 .document ul strong {
@@ -1860,15 +1988,16 @@ footer {
 /*---- HTML Academy ----*/
 .logo-academy {
   font-weight: 100;
-  margin-right: 24px;
-  margin-top: 10px;
+  margin-right: 29px;
+  margin-top: -32px;
 }
 
 .logo-academy p {
 	font-size: 12px;
 	line-height: 16px;
 	color: #fefefe;
-  margin-top: 0px;
+	margin-top: 0;
+  margin-bottom: 6px;
 }
 
 .logo-academy p a {
