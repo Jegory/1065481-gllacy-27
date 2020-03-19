@@ -119,6 +119,7 @@ nav img.logo-catalog {
 }
 
 .main-catalog li ul {
+	z-index: 1;
   background: #f8f7f4;
   position: absolute;
   display: none;
@@ -130,7 +131,7 @@ nav img.logo-catalog {
   min-height: 171px;
 }
 
-.main-catalog > ul li a::before {
+.main-catalog > ul > li > a::before {
 	position: absolute;
 	content:'';
 	height: 1px;
@@ -151,6 +152,9 @@ nav img.logo-catalog {
 	color: #f7f6f3;
 }
 
+.main-catalog .page-catalog::before {
+	display: none;
+}
 /*----- выбранное подменю каталога -----*/
 .main-catalog .on-page,
 .main-catalog .on-page:hover,
@@ -311,6 +315,8 @@ nav img.logo-catalog {
 .basket {
   width: 100px;
   height: 32px;
+  padding-left: 6px;
+  padding-right: 6px;
 }
 
 /*смена фона кнопок svg*/
@@ -475,7 +481,6 @@ nav img.logo-catalog {
 .favorites-basket2 p {
   color: #000000;
   font-size: 13px;
-  font-weight: 100;
   text-align: left;
 }
 
@@ -1111,7 +1116,7 @@ input[type="radio"].visually-hidden {
 }
 
 .slider-controls label:hover {
-	background-color: #f8f7f4
+	background-color: #f8f7f466;
 }
 
 #product-1:checked ~ .site-wrapper {
@@ -1434,6 +1439,10 @@ a:hover {
   margin-bottom: 30px;
 }
 
+.hit-catalog .box {
+	margin-bottom: -22px;
+}
+
 .box:hover {
 	position: absolute;
   width: 293px;
@@ -1444,14 +1453,14 @@ a:hover {
   padding-bottom: 15px;
 }
 
-.hit ul li a .box .button-hit {
+.hit ul li .box .button-hit {
   width: 203px;
   height: 46px;
   margin: 10px 0px 0px 45px;
   visibility: hidden;
 }
 
-.hit ul li a:hover .button-hit {
+.hit ul li:hover .button-hit {
   visibility: visible;
 }
 
@@ -1808,8 +1817,8 @@ footer {
 }
 
 /*---- инфо о компании ----*/
-.herat {
-  margin-top: -25px;
+.heart {
+  margin-top: -20px;
   margin-left: 30px;
 }
 
