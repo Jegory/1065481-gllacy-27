@@ -2,7 +2,6 @@ body {
   background-color: #849d8f;
   font-family: 'Roboto', 'Tahoma', sans-serif;
   color: #ffffff;
-  border: 1px solid #ffffff;
 }
 
 .catalog {
@@ -145,7 +144,7 @@ nav img.logo-catalog {
 	height: 1px;
 	background-color: rgba(255,255,255, 0.2);
 	width: calc(100% - 27px);
-	bottom: 10px;
+	bottom: 6px;
 }
 
 /*----- Меню в каталоге -----*/
@@ -351,6 +350,8 @@ nav img.logo-catalog {
   padding-left: 6px;
   padding-right: 6px;
   padding-bottom: 5px;
+  color: #323232;
+  background: #f8f7f4;
 }
 
 .basket-index {
@@ -1544,7 +1545,7 @@ h1 {
   padding-left: 20px;
   width: 1095px;
   height: 54px;
-
+  word-spacing: 1.2px;
   font-size: 24px;
   font-weight: 500;
   font-stretch: normal;
@@ -1583,6 +1584,19 @@ h1 {
 .info-shop .right li {
 	 margin-left: 45px;
   margin-top: -45px;
+}
+
+.right ul:first-of-type {
+	margin-top: 21px;
+	margin-bottom: 9px;
+}
+
+.right ul:last-of-type {
+	margin-top: 24px;
+}
+
+.left ul:last-of-type {
+	margin-top: 19px;
 }
 
 .left .left-one {
@@ -1741,7 +1755,7 @@ input[type='email']::placeholder {
   font-weight: bold;
   line-height: 24px;
   margin-left: 2px;
-  margin-top: -13px;
+  margin-top: -11px;
 }
 
 .contact {
@@ -1771,7 +1785,7 @@ input[type='email']::placeholder {
   font-weight: bold;
   line-height: 1.33;
   border-radius: 35px;
-  margin-top: 10px;
+  margin-top: 8px;
   padding-top: 11px;
   text-align: center;
   color: #ffffff;
@@ -1797,7 +1811,7 @@ input[type='email']::placeholder {
 
 /*----  Карта  ----*/
 .map {
-  width: 1200px;
+	width: 1200px;
   height: 430px;
   object-fit: contain;
   margin-top: 41px;
@@ -1826,11 +1840,12 @@ input[type='email']::placeholder {
 
 /*---- номера страниц на сайте ----*/
 .site-pages {
-	width: 167px;
+	width: 190px;
 	display: flex;
-	justify-content: space-around;
-	margin-left: 971px;
-	margin-top: 19px;
+	justify-content: space-between;
+	padding-left: 0;
+	margin-left: 968px;
+	margin-top: 20px;
 	margin-bottom: 33px;
 	font-size: 16px;
   font-weight: 500;
@@ -1866,6 +1881,8 @@ input[type='email']::placeholder {
 
 .site-pages li:nth-child(1) a {
 	background-color: transparent;
+	padding-left: 14px;
+  padding-right: 8px;
 	border-radius: 0px;
 	margin-right: 15px;
 }
@@ -1873,7 +1890,7 @@ input[type='email']::placeholder {
 .site-pages li:nth-child(7) a {
 	background-color: transparent;
 	border-radius: 0px;
-	padding-left: 20px;
+	padding-left: 16px;
 }
 
 hr {
