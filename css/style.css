@@ -197,7 +197,7 @@ nav img.logo-catalog {
   font-size: 14px;
   line-height: 16px;
   margin-bottom: 0px;
-    margin-left: -18px;
+  margin-left: -18px;
   margin-right: -18px;
   padding-left: 18px;
   padding-right: 18px;
@@ -505,7 +505,7 @@ nav img.logo-catalog {
   border-radius: 5px;
   font-size: 22px;
   color: #999999;
-  margin-left: -440px;
+  margin-left: -425px;
 }
 
 .favorites-basket1, .favorites-basket2 {
@@ -533,6 +533,11 @@ nav img.logo-catalog {
 
 .favorites-basket2 {
   margin-top: 5px;
+}
+
+.favorites-basket2 p:first-of-type,
+.favorites-basket1 p:first-of-type {
+	width: 220px;
 }
 
 .my-ice {
@@ -819,7 +824,8 @@ option {
 }
 
 .range-controls .bar {
-  width: 50%;
+	margin-left: 10%;
+	width: 60%;
   height: 4px;
   background-color: #f8f7f4;
 }
@@ -1206,7 +1212,10 @@ input[type="radio"].visually-hidden {
 }
 
 /* ----- Фон Малина -----*/
+
 .raspberries {
+	display: flex;
+	flex-direction: column;
   z-index: 1;
   width: 560px;
   height: 230px;
@@ -1229,6 +1238,8 @@ input[type="radio"].visually-hidden {
 
 /* ----- Фон Шоколад -----*/
 .chocolat {
+	display: flex;
+	flex-direction: column;
   z-index: 1;
   width: 560px;
   height: 230px;
@@ -1767,6 +1778,10 @@ input[type='email']::placeholder {
   padding: 13px 0px 15px 25px;
 }
 
+.contact p:nth-child(1) {
+	width: 150px;
+}
+
 .contact p:nth-child(5) {
   margin-top: -15px;
 }
@@ -1829,8 +1844,8 @@ input[type='email']::placeholder {
 
 .contact {
   position: absolute;
-  margin-left: -330px;
-  margin-top: 63px;
+  margin-left: 870px;
+  margin-top: -372px;
   z-index: 1;
 }
 
@@ -1877,7 +1892,7 @@ input[type='email']::placeholder {
 
 .site-pages li:nth-child(1) a {
 	background-color: transparent;
-	padding-left: 14px;
+	padding-left: 36px;
   padding-right: 8px;
 	border-radius: 0px;
 	margin-right: 15px;
@@ -2001,7 +2016,7 @@ footer {
 /*---- HTML Academy ----*/
 .logo-academy {
   font-weight: 100;
-  margin-right: 29px;
+  margin-right: 34px;
   margin-top: -32px;
 }
 
