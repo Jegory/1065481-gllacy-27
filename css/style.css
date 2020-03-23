@@ -511,7 +511,6 @@ nav img.logo-catalog {
 .form-basket hr {
 	width: 510px;
   background: #cacac7;`
-  border: 0;
   height: 1px;
 }
 
@@ -1872,11 +1871,10 @@ input[type='email']::placeholder {
   text-align: right;
 }
 
-/*.site-pages li a {
-	padding: 5px 10px;
-	border-radius: 50px;
-	color: #ffffff;
-}*/
+.site-pages li a {
+	padding: 3px 8px 3px 8px;
+  border-radius: 50%;
+}
 
 .site-pages li a:hover {
 	color: #ffffff;
@@ -1897,23 +1895,28 @@ input[type='email']::placeholder {
 }
 
 .site-pages li:nth-child(1) a {
-padding-right: 15px;
+padding-right: 24px;
+padding-left: 0px;
+}
+
+.site-pages li:nth-child(2) a {
+margin-right: 5px;
 }
 
 .site-pages li:nth-child(3) a {
-margin-right: 21px;
+margin-right: 3px;
 }
 
 .site-pages li:nth-child(4) a {
-margin-right: 19px;
+margin-right: 3px;
 }
 
 .site-pages li:nth-child(5) a {
-margin-right: 20px;
+margin-right: 5px;
 }
 
 .site-pages li:nth-child(6) a {
-margin-right: 10px;
+margin-right: 1px;
 }
 
 .site-pages li:nth-child(7) a {
@@ -2009,9 +2012,6 @@ footer {
   margin-top: -10px;
 }
 
-
-}
-
 .document ul strong {
 	font-weight: bold;
 }
@@ -2057,7 +2057,7 @@ footer {
 }
 
 .form-answer {
-  display: none;
+  display: block;
   z-index: 1;
   position: fixed;
   width: 478px;
@@ -2079,7 +2079,7 @@ footer {
 }
 
 .name-answer {
-	margin-top: 47px;
+	margin-top: 24px;
   font-size: 16px;
   line-height: 1.71;
   color: #999999;
@@ -2095,16 +2095,13 @@ footer {
   font-weight: 100;
 }
 
-.name-answer {
-	position: absolute;
-  top: 60px;
-}
-
 .email-answer {
   margin-top: 20px;
 }
 
 .text-answer {
+	width: 428px;
+  height: 155px;
   border: solid 1px rgba(178, 178, 178, 0.52);
   border-radius: 5px;
   font-size: 16px;
