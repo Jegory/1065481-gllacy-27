@@ -1,0 +1,1 @@
+var link=document.querySelector(".button-contact"),popup=document.querySelector(".form-answer"),close=popup.querySelector(".modal-close");link.addEventListener("click",function(e){e.preventDefault(),popup.classList.add("modal-show"),console.log(popup)}),close.addEventListener("click",function(e){e.preventDefault(),popup.classList.remove("modal-show"),console.log(popup)});
