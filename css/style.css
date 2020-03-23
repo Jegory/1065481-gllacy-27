@@ -510,7 +510,7 @@ nav img.logo-catalog {
 
 .form-basket hr {
 	width: 510px;
-  background: #cacac7;`
+  background: #cacac7;
   height: 1px;
 }
 
@@ -585,7 +585,7 @@ nav img.logo-catalog {
   font-weight: bold;
   font-size: 18px;
   margin-left: 357px;
-  margin-top: 65px;
+  margin-top: 15px;
 }
 
 .form-basket button:active {
@@ -597,7 +597,7 @@ nav img.logo-catalog {
   font-weight: bold;
   font-size: 18px;
   margin-left: 357px;
-  margin-top: 65px;
+  margin-top: 15px;
 }
 
 /*Заголовок каталога*/
@@ -1927,7 +1927,7 @@ margin-right: 1px;
 
 hr {
 	width: 1146px;
-  border: 0;
+	border: 0px;
   height: 1px;
   background: rgba(255,255,255,0.3);
 }
@@ -2057,7 +2057,7 @@ footer {
 }
 
 .form-answer {
-  display: block;
+  display: none;
   z-index: 1;
   position: fixed;
   width: 478px;
